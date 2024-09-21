@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>居中排版设计</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            margin-bottom: 20px;
+        }
+        .menu {
+            margin-bottom: 20px;
+        }
+        .menu a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.3s;
+        }
+        .menu a:hover {
+            color: #007bff;
+        }
+        .menu a::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            border-radius: 50%;
+            background-color: rgba(0, 123, 255, 0.3);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            opacity: 0;
+        }
+        .menu a:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 30%;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .avatar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+        }
+        .avatar img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    </style>
+    <script>
+        function updateContent(content) {
+            document.getElementById("content").innerHTML = content;
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="header">
+                <h1>基于web端的英语背单词辅助学习系统</h1>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <!-- 这里将被内容页中的 ContentPlaceHolder1 替换 -->
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <!-- 这里将被内容页中的 ContentPlaceHolder2 替换 -->
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                <!-- 这里将被内容页中的 ContentPlaceHolder3 替换 -->
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

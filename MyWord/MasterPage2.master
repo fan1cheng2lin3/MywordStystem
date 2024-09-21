@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>基础布局</title>
+    <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    .layout {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .header {
+        background: #333;
+        color: #fff;
+        height:50%;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    .main {
+        flex-grow: 1;
+        padding: 10px 20px;
+        background: #fff;
+    }
+    .footer {
+        background: #333;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+     margin-top: auto; /* 推到底部 */
+        width: 100%; /* 确保宽度正确 */
+        position: fixed; /* 固定位置 */
+        bottom: 0;
+        left: 0;
+    }
+    .container {
+        display: flex;
+        height: 100%;
+    }
+      .mainDiv1 {
+    width: 200px;
+    height: 100%;
+    float: left;
+    background: #444359;
+    color: #333;
+}
+.mainDiv2 {
+    width: calc(100% - 200px);
+    height: 100%;
+    float: left;
+}
+.accordion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.accordion .link {
+    cursor: pointer;
+    display: block;
+    padding: 15px;
+    background: #545c64;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+}
+.accordion li:last-child .link {
+    border-bottom: 0;
+}
+.accordion li i {
+    margin-right: 10px;
+}
+.submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #444359;
+}
+.submenu li {
+    border-bottom: 1px solid #4b4a5e;
+}
+.submenu a {
+    display: block;
+    padding: 12px;
+    color: #d9d9d9;
+    text-decoration: none;
+}
+.submenu a:hover {
+    background: #b63b4d;
+    color: #fff;
+}
+
+.header, .mainDiv1, .main, .footer {
+    margin: 0; /* 去掉外边距 */
+    padding: 0; /* 去掉内边距 */
+}
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="layout">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server">
+                <!-- 头部内容 -->
+            </asp:ContentPlaceHolder>
+            <div class="container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderSidebar" runat="server">
+                    <!-- 侧边栏内容 -->
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                    <!-- 主内容区 -->
+                </asp:ContentPlaceHolder>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderFooter" runat="server">
+                <!-- 页脚内容 -->
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var accordions = document.querySelectorAll('.accordion .link');
+            for (var i = 0; i < accordions.length; i++) {
+                accordions[i].addEventListener('click', function (e) {
+                    var submenu = this.nextElementSibling;
+                    if (submenu.style.display === 'block') {
+                        submenu.style.display = 'none';
+                    } else {
+                        submenu.style.display = 'block';
+                    }
+                    e.stopPropagation();
+                });
+            }
+            document.body.addEventListener('click', function () {
+                var submenus = document.querySelectorAll('.submenu');
+                for (var i = 0; i < submenus.length; i++) {
+                    submenus[i].style.display = 'none';
+                }
+            });
+        });
+</script>
+</body>
+</html>
