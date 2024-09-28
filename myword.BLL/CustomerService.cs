@@ -55,7 +55,6 @@ namespace myword.BLL
             }
         }
 
-
         public void Changepassword(int Userid, string password) 
         { 
             user_Table customer = ( from c in db.user_Table
@@ -82,7 +81,6 @@ namespace myword.BLL
                 return false;
             }
         }
-
 
 
         public void ResetPassword(string name, string email)

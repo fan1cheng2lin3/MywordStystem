@@ -8,4 +8,24 @@
       <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.wordpre" Member="wordpre">
+    <Type Name="wordpre">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="type1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="type2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="type3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="type4" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="wordlevel" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="rootvariant" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="meaning" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="soundmark" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="structure" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="translation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="example" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="exampletranslation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

@@ -11,4 +11,13 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
 
     }
+
+    public bool IsLoggedIn
+    {
+        get
+        {
+            return HttpContext.Current.Session["LoggedIn"] != null && (bool)HttpContext.Current.Session["LoggedIn"];
+        }
+    }
+
 }

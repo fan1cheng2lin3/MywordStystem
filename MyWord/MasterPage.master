@@ -1,63 +1,82 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
+<%@ Register Src="~/UserCtrol/UserControl.ascx" TagPrefix="uc1" TagName="UserControl" %>
+
+
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>居中排版设计</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            box-sizing: border-box; /* 确保padding和border不会增加元素的总宽度 */
         }
+
         .container {
-            width: 80%;
-            margin: auto;
+            width: 80%; /* 调整宽度，保留一些边距 */
+            margin: 0 auto; /* 水平居中 */
             padding: 20px;
             text-align: center;
         }
+
         .header {
-            margin-bottom: 20px;
+            margin-bottom: 0px; /* 增加底部边距 */
         }
+
+            .header h1 {
+                font-size: 2.5em; /* 增加标题字体大小 */
+                margin: 0; /* 移除外边距 */
+                padding-top: 0px; /* 增加顶部内边距，确保标题置顶 */
+            }
+
         .menu {
-            margin-bottom: 20px;
+            margin-bottom: 20px; /* 减少底部边距，使其在移动设备上更紧凑 */
         }
-        .menu a {
-            display: inline-block;
-            margin: 0 10px;
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            transition: color 0.3s;
-        }
-        .menu a:hover {
-            color: #007bff;
-        }
-        .menu a::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300%;
-            height: 300%;
-            border-radius: 50%;
-            background-color: rgba(0, 123, 255, 0.3);
-            transform: translate(-50%, -50%) scale(0);
-            transition: transform 0.5s ease, opacity 0.5s ease;
-            opacity: 0;
-        }
-        .menu a:hover::before {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 0;
-        }
+
+            .menu a {
+                display: inline-block;
+                margin: 0 15px; /* 调整间距 */
+                text-decoration: none;
+                color: #333;
+                font-size: 18px; /* 增加字体大小 */
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                transition: color 0.3s;
+            }
+
+                .menu a:hover {
+                    color: #007bff;
+                }
+
+                .menu a::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 300%;
+                    height: 300%;
+                    border-radius: 50%;
+                    background-color: rgba(0, 123, 255, 0.3);
+                    transform: translate(-50%, -50%) scale(0);
+                    transition: transform 0.5s ease, opacity 0.5s ease;
+                    opacity: 0;
+                }
+
+                .menu a:hover::before {
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1; /* 确保悬停时可见 */
+                }
+
         .content {
-            margin-bottom: 20px;
+            margin-bottom: 20px; /* 减少底部边距 */
         }
+
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -66,12 +85,30 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            margin-top: 30%;
+            font-size: 18px; /* 增加按钮字体大小 */
+            margin-top: 20px; /* 减少顶部边距 */
         }
-        .button:hover {
-            background-color: #0056b3;
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+
+        /* 媒体查询，适应不同屏幕尺寸 */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%; /* 在小屏幕上增加宽度 */
+            }
+
+            .menu a {
+                margin: 0 10px; /* 在小屏幕上减少间距 */
+                font-size: 16px; /* 适当减小字体大小 */
+            }
+
+            .button {
+                font-size: 16px; /* 适当减小按钮字体大小 */
+            }
         }
+
         .avatar {
             position: fixed;
             top: 20px;
@@ -81,34 +118,111 @@
             height: 50px;
             overflow: hidden;
         }
-        .avatar img {
-            width: 100%;
-            height: auto;
+
+            .avatar img {
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+
+        .avatar2 {
+            position: fixed;
+            top: 20px;
+            right: 20px;
             border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
         }
+
+            .avatar2 img {
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+
+        /* 下拉框样式 */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0; /* 与头像对齐 */
+            top: 69px; /* 头像高度 + 一些间距 */
+        }
+
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+        /* 显示下拉框 */
+        .show {
+            display: block;
+        }
+
+
+
+
     </style>
-    <script>
-        function updateContent(content) {
-            document.getElementById("content").innerHTML = content;
-        }
-    </script>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="container">
             <div class="header">
-                <h1>基于web端的英语背单词辅助学习系统</h1>
+                <h1>英语背单词辅助学习系统</h1>
             </div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <!-- 这里将被内容页中的 ContentPlaceHolder1 替换 -->
-            </asp:ContentPlaceHolder>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-                <!-- 这里将被内容页中的 ContentPlaceHolder2 替换 -->
-            </asp:ContentPlaceHolder>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-                <!-- 这里将被内容页中的 ContentPlaceHolder3 替换 -->
-            </asp:ContentPlaceHolder>
+
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <!-- 这里将被内容页中的 ContentPlaceHolder1 替换 -->
+                    顶
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    <!-- 这里将被内容页中的 ContentPlaceHolder2 替换 -->
+                    中
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                    <!-- 这里将被内容页中的 ContentPlaceHolder3 替换 -->
+                    下
+                </asp:ContentPlaceHolder>
+            </div>
+
+
         </div>
     </form>
+    <script>
+        <%-- var IsLoggedIn = <%= IsLoggedIn ? "true" : "false" %>;
+         function goToPage() {
+             if (IsLoggedIn) {
+
+
+             } else {
+                 window.location.href = 'Login/Login.aspx';
+             }
+         }--%>
+    </script>
 </body>
 </html>

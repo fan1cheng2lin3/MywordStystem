@@ -72,6 +72,14 @@ namespace myword.DAL
 				return this.GetTable<user_Table>();
 			}
 		}
+		
+		public System.Data.Linq.Table<wordpre> wordpre
+		{
+			get
+			{
+				return this.GetTable<wordpre>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.user_Table")]
@@ -204,6 +212,303 @@ namespace myword.DAL
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.wordpre")]
+	public partial class wordpre
+	{
+		
+		private System.Nullable<int> _id;
+		
+		private string _type;
+		
+		private string _type1;
+		
+		private string _type2;
+		
+		private string _type3;
+		
+		private string _type4;
+		
+		private string _word;
+		
+		private string _wordlevel;
+		
+		private string _rootvariant;
+		
+		private string _meaning;
+		
+		private string _soundmark;
+		
+		private string _structure;
+		
+		private string _explain;
+		
+		private string _translation;
+		
+		private string _example;
+		
+		private string _exampletranslation;
+		
+		public wordpre()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int")]
+		public System.Nullable<int> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="NVarChar(255)")]
+		public string type
+		{
+			get
+			{
+				return this._type;
+			}
+			set
+			{
+				if ((this._type != value))
+				{
+					this._type = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type1", DbType="NVarChar(255)")]
+		public string type1
+		{
+			get
+			{
+				return this._type1;
+			}
+			set
+			{
+				if ((this._type1 != value))
+				{
+					this._type1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type2", DbType="NVarChar(255)")]
+		public string type2
+		{
+			get
+			{
+				return this._type2;
+			}
+			set
+			{
+				if ((this._type2 != value))
+				{
+					this._type2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type3", DbType="NVarChar(255)")]
+		public string type3
+		{
+			get
+			{
+				return this._type3;
+			}
+			set
+			{
+				if ((this._type3 != value))
+				{
+					this._type3 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type4", DbType="NVarChar(255)")]
+		public string type4
+		{
+			get
+			{
+				return this._type4;
+			}
+			set
+			{
+				if ((this._type4 != value))
+				{
+					this._type4 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wordlevel", DbType="NVarChar(255)")]
+		public string wordlevel
+		{
+			get
+			{
+				return this._wordlevel;
+			}
+			set
+			{
+				if ((this._wordlevel != value))
+				{
+					this._wordlevel = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rootvariant", DbType="NVarChar(255)")]
+		public string rootvariant
+		{
+			get
+			{
+				return this._rootvariant;
+			}
+			set
+			{
+				if ((this._rootvariant != value))
+				{
+					this._rootvariant = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_meaning", DbType="NVarChar(255)")]
+		public string meaning
+		{
+			get
+			{
+				return this._meaning;
+			}
+			set
+			{
+				if ((this._meaning != value))
+				{
+					this._meaning = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soundmark", DbType="NVarChar(255)")]
+		public string soundmark
+		{
+			get
+			{
+				return this._soundmark;
+			}
+			set
+			{
+				if ((this._soundmark != value))
+				{
+					this._soundmark = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_structure", DbType="NVarChar(255)")]
+		public string structure
+		{
+			get
+			{
+				return this._structure;
+			}
+			set
+			{
+				if ((this._structure != value))
+				{
+					this._structure = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_explain", DbType="NVarChar(255)")]
+		public string explain
+		{
+			get
+			{
+				return this._explain;
+			}
+			set
+			{
+				if ((this._explain != value))
+				{
+					this._explain = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_translation", DbType="NVarChar(255)")]
+		public string translation
+		{
+			get
+			{
+				return this._translation;
+			}
+			set
+			{
+				if ((this._translation != value))
+				{
+					this._translation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_example", DbType="NVarChar(255)")]
+		public string example
+		{
+			get
+			{
+				return this._example;
+			}
+			set
+			{
+				if ((this._example != value))
+				{
+					this._example = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_exampletranslation", DbType="NVarChar(255)")]
+		public string exampletranslation
+		{
+			get
+			{
+				return this._exampletranslation;
+			}
+			set
+			{
+				if ((this._exampletranslation != value))
+				{
+					this._exampletranslation = value;
+				}
 			}
 		}
 	}
