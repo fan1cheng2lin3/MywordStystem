@@ -9,18 +9,17 @@
     const retryBtn = document.querySelector('.retry');
     const goodBtn = document.querySelector('.good');
 
-    let words = [];  // 用于存储单词列表
-    let currentIndex = 0;  // 当前单词的索引
-    let correctWord = "";  // 当前单词的正确拼写
+    let words = [];
+    let currentIndex = 0;
+    let correctWord = "";
 
     // 使用 AJAX 获取单词列表
-    axios.get('/api/words')  // 对应后端 API 的路径
+    axios.get('/api/words')
         .then(function (response) {
             words = response.data;
             console.log("Fetched words:", words);
 
             if (words.length > 0) {
-                // 加载第一个单词
                 loadCurrentWord();
             }
         })
@@ -34,24 +33,23 @@
             const currentWord = words[currentIndex];
             questionDiv.innerHTML = `<h2>${currentWord.Translation}</h2>`;
             answerDiv.innerHTML = `
-            <h2>${currentWord.Word}</h2>
-            <p>Sound Mark: ${currentWord.SoundMark}</p>
-            <p>Translation: ${currentWord.Translation}</p>
-            <p>Example: ${currentWord.Example}</p>
-            <p>Example Translation: ${currentWord.ExampleTranslation}</p>
-        `;
-            correctWord = currentWord.Word.trim();  // 去除前后空格
+                <h2>${currentWord.Word}</h2>
+                <p>Sound Mark: ${currentWord.SoundMark}</p>
+                <p>Translation: ${currentWord.Translation}</p>
+                <p>Example: ${currentWord.Example}</p>
+                <p>Example Translation: ${currentWord.ExampleTranslation}</p>
+            `;
+              correctWord = currentWord.Word.trim();  // 去除前后空格
             resetCard();  // 重置卡片状态
         } else {
-            alert("所有单词已完成！");  // 提示完成
+            alert("所有单词已完成！");
         }
     }
 
-
     // 键盘事件监听
     document.addEventListener('keydown', (event) => {
-        console.log('Key pressed:', event.key); // 输出按下的键
-        console.log('questionDiv hidden:', questionDiv.classList.contains('hidden')); // 检查状态
+        console.log('Key pressed:', event.key);
+        console.log('questionDiv hidden:', questionDiv.classList.contains('hidden'));
 
         if (questionDiv.classList.contains('hidden')) {
             if (event.key === 'ArrowRight') {
@@ -79,27 +77,29 @@
     // 简单按钮事件
     easyBtn.addEventListener('click', () => {
         showSpellInput();
-        hideReviewButtons();  // 隐藏所有评价按钮
+        hideReviewButtons();
     });
 
     // 重来按钮事件
     retryBtn.addEventListener('click', () => {
         showSpellInput();
-        hideReviewButtons();  // 隐藏所有评价按钮
+        hideReviewButtons();
     });
 
     // 良好按钮事件
     goodBtn.addEventListener('click', () => {
         showSpellInput();
-        hideReviewButtons();  // 隐藏所有评价按钮
+        hideReviewButtons();
     });
 
     // 显示拼写框
     function showSpellInput() {
-        spellInput.classList.remove('hidden'); // 确保输入框可见
-        spellInput.focus();  // 自动聚焦到输入框
-        spellMessage.classList.add('hidden');  // 隐藏提示信息
+        questionDiv.innerHTML = `<h2>${words[currentIndex].Translation}</h2>`;
+        answerDiv.innerHTML = `<p>${words[currentIndex].SoundMark}</p>`;
+        spellInput.classList.remove('hidden');
+        spellInput.focus();
         spellInput.value = '';  // 清空之前的输入
+        spellMessage.classList.add('hidden');  // 隐藏提示信息
     }
 
     // 隐藏所有评价按钮
@@ -113,10 +113,10 @@
             showAnswerBtn.classList.add('hidden');
         } else if (action === 'showOnlyAnswer') {
             showAnswerBtn.classList.remove('hidden');
-            reviewButtons.classList.add('hidden');  // 隐藏其他按钮
+            reviewButtons.classList.add('hidden');
         } else {
             showAnswerBtn.classList.remove('hidden');
-            reviewButtons.classList.remove('hidden');  // 显示所有按钮
+            reviewButtons.classList.remove('hidden');
         }
     }
 
@@ -132,20 +132,19 @@
     // 键盘事件监听，用于拼写检查
     spellInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
-            const userInput = spellInput.value.trim().toLowerCase(); // 确保输入被处理
-            console.log('User input:', userInput); // 输出用户输入
-            console.log('Correct word:', correctWord.toLowerCase()); // 输出正确单词
-
-            if (userInput === correctWord.toLowerCase()) { // 比较时统一转为小写
+            const userInput = spellInput.value.trim().toLowerCase();
+            if (userInput === correctWord.toLowerCase()) {
                 spellMessage.textContent = "拼写正确！";
                 spellMessage.style.color = "green";
                 spellMessage.classList.remove('hidden');
+                showAnswerBtn.classList.remove('hidden');
                 currentIndex++;
                 loadCurrentWord();  // 显示下一个单词
             } else {
-                spellMessage.textContent = "拼写错误，正确答案：" + correctWord;
-                spellMessage.style.color = "red";
-                spellMessage.classList.remove('hidden');
+                // 不再提示，直接显示错误的单词
+                questionDiv.innerHTML = `<h2>${words[currentIndex].Translation}</h2>`;
+                answerDiv.innerHTML = `<p>${correctWord}</p>`;
+                spellMessage.classList.add('hidden');  // 隐藏拼写提示信息
             }
             event.preventDefault();  // 阻止默认行为，如表单提交
         }

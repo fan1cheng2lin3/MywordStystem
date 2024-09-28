@@ -1,4 +1,7 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+﻿
+//没有拼写功能
+
+document.addEventListener("DOMContentLoaded", () => {
     const showAnswerBtn = document.getElementById('show-answer-btn');
     const questionDiv = document.getElementById('question');
     const answerDiv = document.getElementById('answer');
