@@ -2,10 +2,12 @@
 using System.Web.Http;
 using myword.BLL;
 
+//处理HTTP请求和返回HTTP响应
 public class WordsController : ApiController
 {
-    private News newsService = new News();
 
+    private News newsService = new News();
+   
     // GET: api/words
     [HttpGet]
     public IHttpActionResult GetWords()

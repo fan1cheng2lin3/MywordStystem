@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 
+//配置Web API的路由
 public static class WebApiConfig
 {
     public static void Register(HttpConfiguration config)

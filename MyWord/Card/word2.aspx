@@ -9,18 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学习卡牌</title>
     <link rel="stylesheet" href="../CSS/CardStyle.css">
-    <script src="../JS/CardScript.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../JS/CardScript3.js"></script>
+    <%--<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>--%>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
 
 <body>
     <div class="container-wrapper">
+
+
         <!-- 左边派生卡片 -->
         <div class="container">
             <div class="card">
                 <div id="derivative">
-                    <h2>派生</h2>
+
                 </div>
             </div>
         </div>

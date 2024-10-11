@@ -33,6 +33,9 @@ namespace myword.DAL
     partial void Insertuser_Table(user_Table instance);
     partial void Updateuser_Table(user_Table instance);
     partial void Deleteuser_Table(user_Table instance);
+    partial void Insertword(word instance);
+    partial void Updateword(word instance);
+    partial void Deleteword(word instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -78,6 +81,246 @@ namespace myword.DAL
 			get
 			{
 				return this.GetTable<wordpre>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_00allwords> _00allwords
+		{
+			get
+			{
+				return this.GetTable<_00allwords>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_01primarySchool> _01primarySchool
+		{
+			get
+			{
+				return this.GetTable<_01primarySchool>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_02middleSchool> _02middleSchool
+		{
+			get
+			{
+				return this.GetTable<_02middleSchool>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_03highSchool> _03highSchool
+		{
+			get
+			{
+				return this.GetTable<_03highSchool>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_04cet4> _04cet4
+		{
+			get
+			{
+				return this.GetTable<_04cet4>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_05cet6> _05cet6
+		{
+			get
+			{
+				return this.GetTable<_05cet6>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_06yanjiusheng> _06yanjiusheng
+		{
+			get
+			{
+				return this.GetTable<_06yanjiusheng>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_07boshi> _07boshi
+		{
+			get
+			{
+				return this.GetTable<_07boshi>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_08zhuansi> _08zhuansi
+		{
+			get
+			{
+				return this.GetTable<_08zhuansi>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_09zhuanba> _09zhuanba
+		{
+			get
+			{
+				return this.GetTable<_09zhuanba>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_10gonggong5> _10gonggong5
+		{
+			get
+			{
+				return this.GetTable<_10gonggong5>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_11yasi> _11yasi
+		{
+			get
+			{
+				return this.GetTable<_11yasi>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_27etyma> _27etyma
+		{
+			get
+			{
+				return this.GetTable<_27etyma>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_12tuofu> _12tuofu
+		{
+			get
+			{
+				return this.GetTable<_12tuofu>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_13mba> _13mba
+		{
+			get
+			{
+				return this.GetTable<_13mba>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_14gre> _14gre
+		{
+			get
+			{
+				return this.GetTable<_14gre>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_15sat> _15sat
+		{
+			get
+			{
+				return this.GetTable<_15sat>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_16gmat> _16gmat
+		{
+			get
+			{
+				return this.GetTable<_16gmat>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_17zhichang> _17zhichang
+		{
+			get
+			{
+				return this.GetTable<_17zhichang>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_18qiuzhi> _18qiuzhi
+		{
+			get
+			{
+				return this.GetTable<_18qiuzhi>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_19shangwu> _19shangwu
+		{
+			get
+			{
+				return this.GetTable<_19shangwu>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_20waimao> _20waimao
+		{
+			get
+			{
+				return this.GetTable<_20waimao>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_21yixue> _21yixue
+		{
+			get
+			{
+				return this.GetTable<_21yixue>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_22jiaoyou> _22jiaoyou
+		{
+			get
+			{
+				return this.GetTable<_22jiaoyou>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_23dianhua> _23dianhua
+		{
+			get
+			{
+				return this.GetTable<_23dianhua>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_24jisuanji> _24jisuanji
+		{
+			get
+			{
+				return this.GetTable<_24jisuanji>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_25base> _25base
+		{
+			get
+			{
+				return this.GetTable<_25base>();
+			}
+		}
+		
+		public System.Data.Linq.Table<_26super> _26super
+		{
+			get
+			{
+				return this.GetTable<_26super>();
+			}
+		}
+		
+		public System.Data.Linq.Table<etyma> etyma
+		{
+			get
+			{
+				return this.GetTable<etyma>();
+			}
+		}
+		
+		public System.Data.Linq.Table<word> word
+		{
+			get
+			{
+				return this.GetTable<word>();
 			}
 		}
 	}
@@ -509,6 +752,8279 @@ namespace myword.DAL
 				{
 					this._exampletranslation = value;
 				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[00allwords]")]
+	public partial class _00allwords
+	{
+		
+		private string _word;
+		
+		public _00allwords()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[01primarySchool]")]
+	public partial class _01primarySchool
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count;
+		
+		private string _delete_;
+		
+		private string _add_;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _01primarySchool()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[02middleSchool]")]
+	public partial class _02middleSchool
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count;
+		
+		private string _delete_;
+		
+		private string _add_;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _02middleSchool()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[03highSchool]")]
+	public partial class _03highSchool
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count;
+		
+		private string _delete_;
+		
+		private string _add_;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _03highSchool()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[04cet4]")]
+	public partial class _04cet4
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count;
+		
+		private string _delete_;
+		
+		private string _add_;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _04cet4()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[05cet6]")]
+	public partial class _05cet6
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _05cet6()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[06yanjiusheng]")]
+	public partial class _06yanjiusheng
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _06yanjiusheng()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[07boshi]")]
+	public partial class _07boshi
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _07boshi()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[08zhuansi]")]
+	public partial class _08zhuansi
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count;
+		
+		private string _delete_;
+		
+		private string _add_;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _08zhuansi()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[09zhuanba]")]
+	public partial class _09zhuanba
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _09zhuanba()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[10gonggong5]")]
+	public partial class _10gonggong5
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _10gonggong5()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[11yasi]")]
+	public partial class _11yasi
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _11yasi()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[27etyma]")]
+	public partial class _27etyma
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _phonetic;
+		
+		private string _explain;
+		
+		private string _etyma;
+		
+		private string _sentence_en;
+		
+		private string _sentence_cn;
+		
+		public _27etyma()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonetic", DbType="NVarChar(MAX)")]
+		public string phonetic
+		{
+			get
+			{
+				return this._phonetic;
+			}
+			set
+			{
+				if ((this._phonetic != value))
+				{
+					this._phonetic = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_explain", DbType="NVarChar(MAX)")]
+		public string explain
+		{
+			get
+			{
+				return this._explain;
+			}
+			set
+			{
+				if ((this._explain != value))
+				{
+					this._explain = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_etyma", DbType="NVarChar(MAX)")]
+		public string etyma
+		{
+			get
+			{
+				return this._etyma;
+			}
+			set
+			{
+				if ((this._etyma != value))
+				{
+					this._etyma = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_en", DbType="NVarChar(MAX)")]
+		public string sentence_en
+		{
+			get
+			{
+				return this._sentence_en;
+			}
+			set
+			{
+				if ((this._sentence_en != value))
+				{
+					this._sentence_en = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_cn", DbType="NVarChar(MAX)")]
+		public string sentence_cn
+		{
+			get
+			{
+				return this._sentence_cn;
+			}
+			set
+			{
+				if ((this._sentence_cn != value))
+				{
+					this._sentence_cn = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[12tuofu]")]
+	public partial class _12tuofu
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _12tuofu()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[13mba]")]
+	public partial class _13mba
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _13mba()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[14gre]")]
+	public partial class _14gre
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _14gre()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[15sat]")]
+	public partial class _15sat
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _15sat()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[16gmat]")]
+	public partial class _16gmat
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _16gmat()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[17zhichang]")]
+	public partial class _17zhichang
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _17zhichang()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[18qiuzhi]")]
+	public partial class _18qiuzhi
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _18qiuzhi()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[19shangwu]")]
+	public partial class _19shangwu
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _19shangwu()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[20waimao]")]
+	public partial class _20waimao
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _20waimao()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[21yixue]")]
+	public partial class _21yixue
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _21yixue()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[22jiaoyou]")]
+	public partial class _22jiaoyou
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _22jiaoyou()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[23dianhua]")]
+	public partial class _23dianhua
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _23dianhua()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[24jisuanji]")]
+	public partial class _24jisuanji
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _24jisuanji()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[25base]")]
+	public partial class _25base
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _add_;
+		
+		private string _delete_;
+		
+		private System.Nullable<double> _count;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _25base()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[26super]")]
+	public partial class _26super
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private System.Nullable<double> _score;
+		
+		private System.Nullable<double> _count;
+		
+		private string _delete_;
+		
+		private string _add_;
+		
+		private System.Nullable<double> _count_liulan;
+		
+		private System.Nullable<double> _count_tingdanci;
+		
+		private System.Nullable<double> _count_yingzhong;
+		
+		private System.Nullable<double> _count_zhongying;
+		
+		private System.Nullable<double> _count_pipei;
+		
+		private System.Nullable<double> _count_wanzheng;
+		
+		private System.Nullable<double> _score_yingzhong;
+		
+		private System.Nullable<double> _score_zhongying;
+		
+		private System.Nullable<double> _score_wanzheng;
+		
+		private System.Nullable<double> _score_pipei;
+		
+		public _26super()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score", DbType="Float")]
+		public System.Nullable<double> score
+		{
+			get
+			{
+				return this._score;
+			}
+			set
+			{
+				if ((this._score != value))
+				{
+					this._score = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Float")]
+		public System.Nullable<double> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this._count = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_delete_", DbType="NVarChar(255)")]
+		public string delete_
+		{
+			get
+			{
+				return this._delete_;
+			}
+			set
+			{
+				if ((this._delete_ != value))
+				{
+					this._delete_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_add_", DbType="NVarChar(255)")]
+		public string add_
+		{
+			get
+			{
+				return this._add_;
+			}
+			set
+			{
+				if ((this._add_ != value))
+				{
+					this._add_ = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_liulan", DbType="Float")]
+		public System.Nullable<double> count_liulan
+		{
+			get
+			{
+				return this._count_liulan;
+			}
+			set
+			{
+				if ((this._count_liulan != value))
+				{
+					this._count_liulan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_tingdanci", DbType="Float")]
+		public System.Nullable<double> count_tingdanci
+		{
+			get
+			{
+				return this._count_tingdanci;
+			}
+			set
+			{
+				if ((this._count_tingdanci != value))
+				{
+					this._count_tingdanci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_yingzhong", DbType="Float")]
+		public System.Nullable<double> count_yingzhong
+		{
+			get
+			{
+				return this._count_yingzhong;
+			}
+			set
+			{
+				if ((this._count_yingzhong != value))
+				{
+					this._count_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_zhongying", DbType="Float")]
+		public System.Nullable<double> count_zhongying
+		{
+			get
+			{
+				return this._count_zhongying;
+			}
+			set
+			{
+				if ((this._count_zhongying != value))
+				{
+					this._count_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_pipei", DbType="Float")]
+		public System.Nullable<double> count_pipei
+		{
+			get
+			{
+				return this._count_pipei;
+			}
+			set
+			{
+				if ((this._count_pipei != value))
+				{
+					this._count_pipei = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count_wanzheng", DbType="Float")]
+		public System.Nullable<double> count_wanzheng
+		{
+			get
+			{
+				return this._count_wanzheng;
+			}
+			set
+			{
+				if ((this._count_wanzheng != value))
+				{
+					this._count_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_yingzhong", DbType="Float")]
+		public System.Nullable<double> score_yingzhong
+		{
+			get
+			{
+				return this._score_yingzhong;
+			}
+			set
+			{
+				if ((this._score_yingzhong != value))
+				{
+					this._score_yingzhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_zhongying", DbType="Float")]
+		public System.Nullable<double> score_zhongying
+		{
+			get
+			{
+				return this._score_zhongying;
+			}
+			set
+			{
+				if ((this._score_zhongying != value))
+				{
+					this._score_zhongying = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_wanzheng", DbType="Float")]
+		public System.Nullable<double> score_wanzheng
+		{
+			get
+			{
+				return this._score_wanzheng;
+			}
+			set
+			{
+				if ((this._score_wanzheng != value))
+				{
+					this._score_wanzheng = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_score_pipei", DbType="Float")]
+		public System.Nullable<double> score_pipei
+		{
+			get
+			{
+				return this._score_pipei;
+			}
+			set
+			{
+				if ((this._score_pipei != value))
+				{
+					this._score_pipei = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.etyma")]
+	public partial class etyma
+	{
+		
+		private System.Nullable<double> _id;
+		
+		private string _word;
+		
+		private string _phonetic;
+		
+		private string _explain;
+		
+		private string _etyma1;
+		
+		private string _sentence_en;
+		
+		private string _sentence_cn;
+		
+		public etyma()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
+		public System.Nullable<double> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonetic", DbType="NVarChar(MAX)")]
+		public string phonetic
+		{
+			get
+			{
+				return this._phonetic;
+			}
+			set
+			{
+				if ((this._phonetic != value))
+				{
+					this._phonetic = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_explain", DbType="NVarChar(MAX)")]
+		public string explain
+		{
+			get
+			{
+				return this._explain;
+			}
+			set
+			{
+				if ((this._explain != value))
+				{
+					this._explain = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="etyma", Storage="_etyma1", DbType="NVarChar(MAX)")]
+		public string etyma1
+		{
+			get
+			{
+				return this._etyma1;
+			}
+			set
+			{
+				if ((this._etyma1 != value))
+				{
+					this._etyma1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_en", DbType="NVarChar(MAX)")]
+		public string sentence_en
+		{
+			get
+			{
+				return this._sentence_en;
+			}
+			set
+			{
+				if ((this._sentence_en != value))
+				{
+					this._sentence_en = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_cn", DbType="NVarChar(MAX)")]
+		public string sentence_cn
+		{
+			get
+			{
+				return this._sentence_cn;
+			}
+			set
+			{
+				if ((this._sentence_cn != value))
+				{
+					this._sentence_cn = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.word")]
+	public partial class word : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _wordpre;
+		
+		private string _phonetic;
+		
+		private string _phonetic_uk;
+		
+		private string _explain;
+		
+		private string _etyma;
+		
+		private string _sentence_en;
+		
+		private string _sentence_cn;
+		
+		private string _ancillary;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnwordpreChanging(string value);
+    partial void OnwordpreChanged();
+    partial void OnphoneticChanging(string value);
+    partial void OnphoneticChanged();
+    partial void Onphonetic_ukChanging(string value);
+    partial void Onphonetic_ukChanged();
+    partial void OnexplainChanging(string value);
+    partial void OnexplainChanged();
+    partial void OnetymaChanging(string value);
+    partial void OnetymaChanged();
+    partial void Onsentence_enChanging(string value);
+    partial void Onsentence_enChanged();
+    partial void Onsentence_cnChanging(string value);
+    partial void Onsentence_cnChanged();
+    partial void OnancillaryChanging(string value);
+    partial void OnancillaryChanged();
+    #endregion
+		
+		public word()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wordpre", DbType="NVarChar(255)")]
+		public string wordpre
+		{
+			get
+			{
+				return this._wordpre;
+			}
+			set
+			{
+				if ((this._wordpre != value))
+				{
+					this.OnwordpreChanging(value);
+					this.SendPropertyChanging();
+					this._wordpre = value;
+					this.SendPropertyChanged("wordpre");
+					this.OnwordpreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonetic", DbType="NVarChar(255)")]
+		public string phonetic
+		{
+			get
+			{
+				return this._phonetic;
+			}
+			set
+			{
+				if ((this._phonetic != value))
+				{
+					this.OnphoneticChanging(value);
+					this.SendPropertyChanging();
+					this._phonetic = value;
+					this.SendPropertyChanged("phonetic");
+					this.OnphoneticChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonetic_uk", DbType="NVarChar(255)")]
+		public string phonetic_uk
+		{
+			get
+			{
+				return this._phonetic_uk;
+			}
+			set
+			{
+				if ((this._phonetic_uk != value))
+				{
+					this.Onphonetic_ukChanging(value);
+					this.SendPropertyChanging();
+					this._phonetic_uk = value;
+					this.SendPropertyChanged("phonetic_uk");
+					this.Onphonetic_ukChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_explain", DbType="NVarChar(255)")]
+		public string explain
+		{
+			get
+			{
+				return this._explain;
+			}
+			set
+			{
+				if ((this._explain != value))
+				{
+					this.OnexplainChanging(value);
+					this.SendPropertyChanging();
+					this._explain = value;
+					this.SendPropertyChanged("explain");
+					this.OnexplainChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_etyma", DbType="NVarChar(255)")]
+		public string etyma
+		{
+			get
+			{
+				return this._etyma;
+			}
+			set
+			{
+				if ((this._etyma != value))
+				{
+					this.OnetymaChanging(value);
+					this.SendPropertyChanging();
+					this._etyma = value;
+					this.SendPropertyChanged("etyma");
+					this.OnetymaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_en", DbType="NVarChar(255)")]
+		public string sentence_en
+		{
+			get
+			{
+				return this._sentence_en;
+			}
+			set
+			{
+				if ((this._sentence_en != value))
+				{
+					this.Onsentence_enChanging(value);
+					this.SendPropertyChanging();
+					this._sentence_en = value;
+					this.SendPropertyChanged("sentence_en");
+					this.Onsentence_enChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_cn", DbType="NVarChar(255)")]
+		public string sentence_cn
+		{
+			get
+			{
+				return this._sentence_cn;
+			}
+			set
+			{
+				if ((this._sentence_cn != value))
+				{
+					this.Onsentence_cnChanging(value);
+					this.SendPropertyChanging();
+					this._sentence_cn = value;
+					this.SendPropertyChanged("sentence_cn");
+					this.Onsentence_cnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ancillary", DbType="NVarChar(255)")]
+		public string ancillary
+		{
+			get
+			{
+				return this._ancillary;
+			}
+			set
+			{
+				if ((this._ancillary != value))
+				{
+					this.OnancillaryChanging(value);
+					this.SendPropertyChanging();
+					this._ancillary = value;
+					this.SendPropertyChanged("ancillary");
+					this.OnancillaryChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

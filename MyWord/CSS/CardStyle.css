@@ -1,64 +1,81 @@
-﻿   /* 引入需要的字体 */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+﻿﻿ /* 引入需要的字体 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f9;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+}
 
-        .container-wrapper {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-        }
+.container-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
 
-        .container {
-            text-align: center;
-            width: 30%; /* 每张卡片占父容器的30%宽度 */
-        }
+.container {
+    text-align: center;
+    width: 30%; /* 每张卡片占父容器的30%宽度 */
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            height: 600px; /* 设置固定高度 */
-            margin: auto;
-            overflow: auto; /* 如果内容超出，显示滚动条 */
-        }
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 600px; /* 设置固定高度 */
+    margin: auto;
+    overflow: auto; /* 如果内容超出，显示滚动条 */
+}
 
-        .hidden {
-            display: none;
-        }
+.hidden {
+    display: none;
+}
 
-        h2 {
-            margin-bottom: 20px;
-        }
+h2 {
+    margin-bottom: 20px;
+}
 
-        .button-container {
-            display: flex;
-            justify-content: center; /* 水平居中 */
-            align-items: center; /* 垂直居中 */
-            height: 100%; /* 占满卡片的高度 */
-        }
+.button-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 100%; /* 占满卡片的高度 */
+}
 
-        button {
-            padding: 20px 50px;
-            border: none;
-            border-radius: 50px;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            margin: 10px; /* 为按钮之间提供一些间距 */
-        }
+button {
+    padding: 20px 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin: 10px; /* 为按钮之间提供一些间距 */
+}
 
-        button:hover {
-            background-color: #45a049;
-        }
+    button:hover {
+        background-color: #45a049;
+    }
 
-        button:disabled {
-            background-color: #d3d3d3;
-            cursor: not-allowed;
-        }
+    button:disabled {
+        background-color: #d3d3d3;
+        cursor: not-allowed;
+    }
+
+dl {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dd {
+    margin-bottom: 10px;
+}

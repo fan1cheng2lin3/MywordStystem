@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="CustomerService.cs" />
     <Compile Include="News.cs" />
+    <Compile Include="NewWord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

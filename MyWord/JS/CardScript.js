@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+﻿﻿document.addEventListener("DOMContentLoaded", () => {
     const showAnswerBtn = document.getElementById('show-answer-btn');
     const questionDiv = document.getElementById('question');
     const answerDiv = document.getElementById('answer');

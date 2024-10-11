@@ -11,33 +11,7 @@ namespace myword.BLL
     {
         DataClasses1DataContext db = new DataClasses1DataContext();
 
-        public void Insert(string name, string password, string email)
-        {
-            user_Table customer = new user_Table
-            {
-                Name = name,
-                Password = password,
-                Email = email
-            };
-            db.user_Table.InsertOnSubmit(customer);
-            db.SubmitChanges();
-        }
-
-        public bool IsNameExist(string name)
-        {
-            user_Table customer = (from c in db.user_Table
-                                   where c.Name == name
-                                   select c).FirstOrDefault();
-
-            if (customer == null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
+       
 
         // 新增方法：读取wordpre表的数据
         public List<WordPre> GetWordPreData()

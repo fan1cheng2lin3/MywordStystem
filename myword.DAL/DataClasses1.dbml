@@ -28,4 +28,564 @@
       <Column Name="exampletranslation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.[00allwords]" Member="_00allwords">
+    <Type Name="_00allwords">
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[01primarySchool]" Member="_01primarySchool">
+    <Type Name="_01primarySchool">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[02middleSchool]" Member="_02middleSchool">
+    <Type Name="_02middleSchool">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[03highSchool]" Member="_03highSchool">
+    <Type Name="_03highSchool">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[04cet4]" Member="_04cet4">
+    <Type Name="_04cet4">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[05cet6]" Member="_05cet6">
+    <Type Name="_05cet6">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[06yanjiusheng]" Member="_06yanjiusheng">
+    <Type Name="_06yanjiusheng">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[07boshi]" Member="_07boshi">
+    <Type Name="_07boshi">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[08zhuansi]" Member="_08zhuansi">
+    <Type Name="_08zhuansi">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[09zhuanba]" Member="_09zhuanba">
+    <Type Name="_09zhuanba">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[10gonggong5]" Member="_10gonggong5">
+    <Type Name="_10gonggong5">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[11yasi]" Member="_11yasi">
+    <Type Name="_11yasi">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[27etyma]" Member="_27etyma">
+    <Type Name="_27etyma">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[12tuofu]" Member="_12tuofu">
+    <Type Name="_12tuofu">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[13mba]" Member="_13mba">
+    <Type Name="_13mba">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[14gre]" Member="_14gre">
+    <Type Name="_14gre">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[15sat]" Member="_15sat">
+    <Type Name="_15sat">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[16gmat]" Member="_16gmat">
+    <Type Name="_16gmat">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[17zhichang]" Member="_17zhichang">
+    <Type Name="_17zhichang">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[18qiuzhi]" Member="_18qiuzhi">
+    <Type Name="_18qiuzhi">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[19shangwu]" Member="_19shangwu">
+    <Type Name="_19shangwu">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[20waimao]" Member="_20waimao">
+    <Type Name="_20waimao">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[21yixue]" Member="_21yixue">
+    <Type Name="_21yixue">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[22jiaoyou]" Member="_22jiaoyou">
+    <Type Name="_22jiaoyou">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[23dianhua]" Member="_23dianhua">
+    <Type Name="_23dianhua">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[24jisuanji]" Member="_24jisuanji">
+    <Type Name="_24jisuanji">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[25base]" Member="_25base">
+    <Type Name="_25base">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[26super]" Member="_26super">
+    <Type Name="_26super">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.etyma" Member="etyma">
+    <Type Name="etyma">
+      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="etyma" Member="etyma1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.word" Member="word">
+    <Type Name="word">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>
