@@ -8,3 +8,13 @@ C:\Users\Administrator\source\repos\wordsystem\myword.BLL\obj\Debug\myword.BLL.c
 C:\Users\Administrator\source\repos\wordsystem\myword.BLL\obj\Debug\myword.BLL.csproj.Up2Date
 C:\Users\Administrator\source\repos\wordsystem\myword.BLL\obj\Debug\myword.BLL.dll
 C:\Users\Administrator\source\repos\wordsystem\myword.BLL\obj\Debug\myword.BLL.pdb
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.BLL\bin\Debug\myword.BLL.dll
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.BLL\bin\Debug\myword.BLL.pdb
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.BLL\bin\Debug\myword.DAL.dll
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.BLL\bin\Debug\myword.DAL.pdb
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.BLL\bin\Debug\myword.DAL.dll.config
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.BLL\obj\Debug\myword.BLL.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.BLL\obj\Debug\myword.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.BLL\obj\Debug\myword.BLL.csproj.Up2Date
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.BLL\obj\Debug\myword.BLL.dll
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.BLL\obj\Debug\myword.BLL.pdb

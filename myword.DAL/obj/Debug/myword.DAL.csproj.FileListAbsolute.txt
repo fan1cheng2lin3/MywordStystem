@@ -5,3 +5,10 @@ C:\Users\Administrator\source\repos\wordsystem\myword.DAL\obj\Debug\myword.DAL.c
 C:\Users\Administrator\source\repos\wordsystem\myword.DAL\obj\Debug\myword.DAL.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\wordsystem\myword.DAL\obj\Debug\myword.DAL.dll
 C:\Users\Administrator\source\repos\wordsystem\myword.DAL\obj\Debug\myword.DAL.pdb
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\bin\Debug\myword.DAL.dll.config
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\bin\Debug\myword.DAL.dll
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\bin\Debug\myword.DAL.pdb
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\obj\Debug\myword.DAL.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\obj\Debug\myword.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\obj\Debug\myword.DAL.dll
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\obj\Debug\myword.DAL.pdb

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="word2.aspx.cs" Inherits="Card_word2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="word.aspx.cs" Inherits="Card_word2" %>
 
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学习卡牌</title>
     <link rel="stylesheet" href="../CSS/CardStyle.css">
-    <script src="../JS/CardScript3.js"></script>
+    <script src="../JS/CardScript.js"></script>
     <%--<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>--%>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 

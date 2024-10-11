@@ -64,8 +64,8 @@
 
         <a href="javascript:void(0);" onclick="updateContent('这是首页');">首页</a>
         <a href="javascript:void(0);" onclick="updateContent('这是资讯');">资讯</a>
-        <a href="javascript:void(0);" onclick="updateContent('Card/word2.aspx', true);">卡牌</a>
-        <a href="javascript:void(0);" onclick="updateContent('这是词库');">词库</a>
+        <a href="javascript:void(0);" onclick="updateContent('yemian/word.aspx', true);">卡牌</a>
+        <a href="javascript:void(0);" onclick="updateContent('yemian/Ciku.aspx', true);">词库</a>
         <a href="javascript:void(0);" onclick="updateContent('这是关于');">关于</a>
         <hr color="red" />
 

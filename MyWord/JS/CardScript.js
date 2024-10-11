@@ -1,7 +1,9 @@
-﻿﻿document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", () => {
     const showAnswerBtn = document.getElementById('show-answer-btn');
     const questionDiv = document.getElementById('question');
     const answerDiv = document.getElementById('answer');
+    const derivativeDiv = document.getElementById('derivative');
+    const matchDiv = document.getElementById('match');
     const reviewButtons = document.getElementById('review-buttons');
     const spellInput = document.getElementById('spell-input');
     const spellMessage = document.getElementById('spell-message');
@@ -14,7 +16,7 @@
     let correctWord = "";
 
     // 使用 AJAX 获取单词列表
-    axios.get('/api/words')
+    axios.get('/api/newwords')
         .then(function (response) {
             words = response.data;
             console.log("Fetched words:", words);
@@ -29,22 +31,76 @@
 
     // 加载当前单词
     function loadCurrentWord() {
+        if (!words || words.length === 0) {
+            console.error("No words available.");
+            return;
+        }
+
         if (currentIndex < words.length) {
             const currentWord = words[currentIndex];
-            questionDiv.innerHTML = `<h2>${currentWord.Translation}</h2>`;
+            console.log("Current word:", currentWord); // 检查这里是否为undefined
+            questionDiv.innerHTML = `<h2>${currentWord.Explanation2}</h2>`;
+
+
+            derivativeDiv.innerHTML = `
+            <dt style=font-size:40px >词根助记</dt>
+            <dl>
+                <dd>${formatEtyma(currentWord.Etyma || '空')}</dd>
+            </dl>
+        `;
+
+
+            matchDiv.innerHTML = `
+            <dt style=font-size:40px >助记</dt>
+            <dl>
+                <dd>${formatEtyma(currentWord.Ancillary || '空')}</dd>
+            </dl>
+        `;
+
+
             answerDiv.innerHTML = `
-                <h2>${currentWord.Word}</h2>
-                <p>Sound Mark: ${currentWord.SoundMark}</p>
-                <p>Translation: ${currentWord.Translation}</p>
-                <p>Example: ${currentWord.Example}</p>
-                <p>Example Translation: ${currentWord.ExampleTranslation}</p>
-            `;
-              correctWord = currentWord.Word.trim();  // 去除前后空格
-            resetCard();  // 重置卡片状态
+            <h1>${currentWord.Wordpre || 'No Word'}</h2>
+            <p>美式: ${currentWord.Phonetic || 'No Sound Mark'}</p>
+            <p>英式: ${currentWord.PhoneticUK || 'No Sound Mark'}</p>
+            <p>翻译: ${currentWord.Explanation2 || 'No Translation'}</p>
+            <p>例子: ${currentWord.SentenceEN || 'No Example'}</p>
+            <p>例子翻译: ${currentWord.SentenceCN || 'No Example Translation'}</p>
+        `;
+        
+            correctWord = (currentWord.Wordpre || '').trim(); // 使用 || 操作符提供默认值
+
+            
+            resetCard(); // 重置卡片状态
         } else {
             alert("所有单词已完成！");
         }
     }
+
+    function formatEtyma(etyma) {
+        // 用 <br> 替换 ; 来换行
+        let formatted = etyma.replace(/;|；/g, ';<br>')
+            .replace(/【记】/g, ' ')
+            .replace(/※ /g, '<br>※ ');
+        // 用 <h2> 替换 # 来创建一级标题
+        formatted = formatted.replace(/#/g, '</h2><h2>');
+
+        // 用 <h3> 替换 ## 来创建二级标题
+        formatted = formatted.replace(/##/g, '</h2><h3>');
+
+        // 添加初始的 <h2> 标签，因为没有标题的文本也应该被包裹
+        formatted = `<h2>${formatted}`;
+
+        // 如果最后一个字符是 </h2> 或 </h3>，添加一个 </h3> 以闭合最后的标题
+        if (formatted.endsWith('</h2>')) {
+            formatted += '</h3>';
+        } else if (formatted.endsWith('</h3>')) {
+            formatted += '</h3>';
+        }
+
+        return formatted;
+    }
+
+   
 
     // 键盘事件监听
     document.addEventListener('keydown', (event) => {
@@ -94,8 +150,8 @@
 
     // 显示拼写框
     function showSpellInput() {
-        questionDiv.innerHTML = `<h2>${words[currentIndex].Translation}</h2>`;
-        answerDiv.innerHTML = `<p>${words[currentIndex].SoundMark}</p>`;
+        questionDiv.innerHTML = `<h2>${words[currentIndex].Phonetic}</h2>`;
+        answerDiv.innerHTML = `<p>${words[currentIndex].Phonetic}</p>`;
         spellInput.classList.remove('hidden');
         spellInput.focus();
         spellInput.value = '';  // 清空之前的输入
@@ -123,6 +179,7 @@
     // 重置卡片为初始状态
     function resetCard() {
         questionDiv.classList.remove('hidden');
+        derivativeDiv.classList.remove('hidden');
         answerDiv.classList.add('hidden');
         reviewButtons.classList.add('hidden');
         spellInput.classList.add('hidden');  // 隐藏拼写输入框
@@ -142,7 +199,7 @@
                 loadCurrentWord();  // 显示下一个单词
             } else {
                 // 不再提示，直接显示错误的单词
-                questionDiv.innerHTML = `<h2>${words[currentIndex].Translation}</h2>`;
+                questionDiv.innerHTML = `<h2>${words[currentIndex].Explanation2}</h2>`;
                 answerDiv.innerHTML = `<p>${correctWord}</p>`;
                 spellMessage.classList.add('hidden');  // 隐藏拼写提示信息
             }

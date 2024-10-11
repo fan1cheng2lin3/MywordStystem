@@ -1,0 +1,20 @@
+﻿/* 引入需要的字体 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+#searchInput {
+    width: 200px;
+    padding: 8px;
+    margin: 10px;
+}
+
+#searchButton {
+    padding: 8px 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#searchResults div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}

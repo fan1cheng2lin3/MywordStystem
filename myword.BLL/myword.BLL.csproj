@@ -42,8 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CiKu.cs" />
     <Compile Include="CustomerService.cs" />
-    <Compile Include="News.cs" />
+    <Compile Include="回收站\News.cs" />
     <Compile Include="NewWord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

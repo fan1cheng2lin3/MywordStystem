@@ -68,11 +68,11 @@ namespace myword.DAL
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<user_Table> user_Table
+		public System.Data.Linq.Table<_00allwords> _00allwords
 		{
 			get
 			{
-				return this.GetTable<user_Table>();
+				return this.GetTable<_00allwords>();
 			}
 		}
 		
@@ -81,14 +81,6 @@ namespace myword.DAL
 			get
 			{
 				return this.GetTable<wordpre>();
-			}
-		}
-		
-		public System.Data.Linq.Table<_00allwords> _00allwords
-		{
-			get
-			{
-				return this.GetTable<_00allwords>();
 			}
 		}
 		
@@ -177,14 +169,6 @@ namespace myword.DAL
 			get
 			{
 				return this.GetTable<_11yasi>();
-			}
-		}
-		
-		public System.Data.Linq.Table<_27etyma> _27etyma
-		{
-			get
-			{
-				return this.GetTable<_27etyma>();
 			}
 		}
 		
@@ -308,11 +292,27 @@ namespace myword.DAL
 			}
 		}
 		
+		public System.Data.Linq.Table<_27etyma> _27etyma
+		{
+			get
+			{
+				return this.GetTable<_27etyma>();
+			}
+		}
+		
 		public System.Data.Linq.Table<etyma> etyma
 		{
 			get
 			{
 				return this.GetTable<etyma>();
+			}
+		}
+		
+		public System.Data.Linq.Table<user_Table> user_Table
+		{
+			get
+			{
+				return this.GetTable<user_Table>();
 			}
 		}
 		
@@ -325,136 +325,29 @@ namespace myword.DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.user_Table")]
-	public partial class user_Table : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[00allwords]")]
+	public partial class _00allwords
 	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		private string _word;
 		
-		private int _Userid;
-		
-		private string _Name;
-		
-		private string _Password;
-		
-		private string _Email;
-		
-    #region 可扩展性方法定义
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnUseridChanging(int value);
-    partial void OnUseridChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnPasswordChanging(string value);
-    partial void OnPasswordChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    #endregion
-		
-		public user_Table()
+		public _00allwords()
 		{
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Userid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Userid
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
 		{
 			get
 			{
-				return this._Userid;
+				return this._word;
 			}
 			set
 			{
-				if ((this._Userid != value))
+				if ((this._word != value))
 				{
-					this.OnUseridChanging(value);
-					this.SendPropertyChanging();
-					this._Userid = value;
-					this.SendPropertyChanged("Userid");
-					this.OnUseridChanged();
+					this._word = value;
 				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this.OnNameChanging(value);
-					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50)")]
-		public string Password
-		{
-			get
-			{
-				return this._Password;
-			}
-			set
-			{
-				if ((this._Password != value))
-				{
-					this.OnPasswordChanging(value);
-					this.SendPropertyChanging();
-					this._Password = value;
-					this.SendPropertyChanged("Password");
-					this.OnPasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -756,38 +649,11 @@ namespace myword.DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[00allwords]")]
-	public partial class _00allwords
-	{
-		
-		private string _word;
-		
-		public _00allwords()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
-		public string word
-		{
-			get
-			{
-				return this._word;
-			}
-			set
-			{
-				if ((this._word != value))
-				{
-					this._word = value;
-				}
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[01primarySchool]")]
 	public partial class _01primarySchool
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -823,8 +689,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -1084,7 +950,7 @@ namespace myword.DAL
 	public partial class _02middleSchool
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -1120,8 +986,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -1381,7 +1247,7 @@ namespace myword.DAL
 	public partial class _03highSchool
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -1417,8 +1283,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -1678,7 +1544,7 @@ namespace myword.DAL
 	public partial class _04cet4
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -1714,8 +1580,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -1975,7 +1841,7 @@ namespace myword.DAL
 	public partial class _05cet6
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -2011,8 +1877,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -2272,7 +2138,7 @@ namespace myword.DAL
 	public partial class _06yanjiusheng
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -2308,8 +2174,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -2569,7 +2435,7 @@ namespace myword.DAL
 	public partial class _07boshi
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -2605,8 +2471,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -2866,7 +2732,7 @@ namespace myword.DAL
 	public partial class _08zhuansi
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -2902,8 +2768,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -3163,7 +3029,7 @@ namespace myword.DAL
 	public partial class _09zhuanba
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -3199,8 +3065,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -3460,7 +3326,7 @@ namespace myword.DAL
 	public partial class _10gonggong5
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -3496,8 +3362,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -3757,7 +3623,7 @@ namespace myword.DAL
 	public partial class _11yasi
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -3793,8 +3659,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -4050,146 +3916,11 @@ namespace myword.DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[27etyma]")]
-	public partial class _27etyma
-	{
-		
-		private System.Nullable<double> _id;
-		
-		private string _word;
-		
-		private string _phonetic;
-		
-		private string _explain;
-		
-		private string _etyma;
-		
-		private string _sentence_en;
-		
-		private string _sentence_cn;
-		
-		public _27etyma()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this._id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
-		public string word
-		{
-			get
-			{
-				return this._word;
-			}
-			set
-			{
-				if ((this._word != value))
-				{
-					this._word = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonetic", DbType="NVarChar(MAX)")]
-		public string phonetic
-		{
-			get
-			{
-				return this._phonetic;
-			}
-			set
-			{
-				if ((this._phonetic != value))
-				{
-					this._phonetic = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_explain", DbType="NVarChar(MAX)")]
-		public string explain
-		{
-			get
-			{
-				return this._explain;
-			}
-			set
-			{
-				if ((this._explain != value))
-				{
-					this._explain = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_etyma", DbType="NVarChar(MAX)")]
-		public string etyma
-		{
-			get
-			{
-				return this._etyma;
-			}
-			set
-			{
-				if ((this._etyma != value))
-				{
-					this._etyma = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_en", DbType="NVarChar(MAX)")]
-		public string sentence_en
-		{
-			get
-			{
-				return this._sentence_en;
-			}
-			set
-			{
-				if ((this._sentence_en != value))
-				{
-					this._sentence_en = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_cn", DbType="NVarChar(MAX)")]
-		public string sentence_cn
-		{
-			get
-			{
-				return this._sentence_cn;
-			}
-			set
-			{
-				if ((this._sentence_cn != value))
-				{
-					this._sentence_cn = value;
-				}
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[12tuofu]")]
 	public partial class _12tuofu
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -4225,8 +3956,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -4486,7 +4217,7 @@ namespace myword.DAL
 	public partial class _13mba
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -4522,8 +4253,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -4783,7 +4514,7 @@ namespace myword.DAL
 	public partial class _14gre
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -4819,8 +4550,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -5080,7 +4811,7 @@ namespace myword.DAL
 	public partial class _15sat
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -5116,8 +4847,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -5377,7 +5108,7 @@ namespace myword.DAL
 	public partial class _16gmat
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -5413,8 +5144,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -5674,7 +5405,7 @@ namespace myword.DAL
 	public partial class _17zhichang
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -5710,8 +5441,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -5971,7 +5702,7 @@ namespace myword.DAL
 	public partial class _18qiuzhi
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -6007,8 +5738,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -6268,7 +5999,7 @@ namespace myword.DAL
 	public partial class _19shangwu
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -6304,8 +6035,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -6565,7 +6296,7 @@ namespace myword.DAL
 	public partial class _20waimao
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -6601,8 +6332,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -6862,7 +6593,7 @@ namespace myword.DAL
 	public partial class _21yixue
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -6898,8 +6629,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -7159,7 +6890,7 @@ namespace myword.DAL
 	public partial class _22jiaoyou
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -7195,8 +6926,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -7456,7 +7187,7 @@ namespace myword.DAL
 	public partial class _23dianhua
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -7492,8 +7223,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -7753,7 +7484,7 @@ namespace myword.DAL
 	public partial class _24jisuanji
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -7789,8 +7520,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -8050,7 +7781,7 @@ namespace myword.DAL
 	public partial class _25base
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -8086,8 +7817,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -8347,7 +8078,7 @@ namespace myword.DAL
 	public partial class _26super
 	{
 		
-		private System.Nullable<double> _id;
+		private int _id;
 		
 		private string _word;
 		
@@ -8383,8 +8114,8 @@ namespace myword.DAL
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Float")]
-		public System.Nullable<double> id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
 		{
 			get
 			{
@@ -8640,6 +8371,141 @@ namespace myword.DAL
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[27etyma]")]
+	public partial class _27etyma
+	{
+		
+		private System.Nullable<int> _id;
+		
+		private string _word;
+		
+		private string _phonetic;
+		
+		private string _explain;
+		
+		private string _etyma;
+		
+		private string _sentence_en;
+		
+		private string _sentence_cn;
+		
+		public _27etyma()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int")]
+		public System.Nullable<int> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="NVarChar(255)")]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonetic", DbType="NVarChar(MAX)")]
+		public string phonetic
+		{
+			get
+			{
+				return this._phonetic;
+			}
+			set
+			{
+				if ((this._phonetic != value))
+				{
+					this._phonetic = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_explain", DbType="NVarChar(MAX)")]
+		public string explain
+		{
+			get
+			{
+				return this._explain;
+			}
+			set
+			{
+				if ((this._explain != value))
+				{
+					this._explain = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_etyma", DbType="NVarChar(MAX)")]
+		public string etyma
+		{
+			get
+			{
+				return this._etyma;
+			}
+			set
+			{
+				if ((this._etyma != value))
+				{
+					this._etyma = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_en", DbType="NVarChar(MAX)")]
+		public string sentence_en
+		{
+			get
+			{
+				return this._sentence_en;
+			}
+			set
+			{
+				if ((this._sentence_en != value))
+				{
+					this._sentence_en = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_cn", DbType="NVarChar(MAX)")]
+		public string sentence_cn
+		{
+			get
+			{
+				return this._sentence_cn;
+			}
+			set
+			{
+				if ((this._sentence_cn != value))
+				{
+					this._sentence_cn = value;
+				}
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.etyma")]
 	public partial class etyma
 	{
@@ -8771,6 +8637,140 @@ namespace myword.DAL
 				{
 					this._sentence_cn = value;
 				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.user_Table")]
+	public partial class user_Table : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Userid;
+		
+		private string _Name;
+		
+		private string _Password;
+		
+		private string _Email;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnUseridChanging(int value);
+    partial void OnUseridChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    #endregion
+		
+		public user_Table()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Userid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Userid
+		{
+			get
+			{
+				return this._Userid;
+			}
+			set
+			{
+				if ((this._Userid != value))
+				{
+					this.OnUseridChanging(value);
+					this.SendPropertyChanging();
+					this._Userid = value;
+					this.SendPropertyChanged("Userid");
+					this.OnUseridChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50)")]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this.OnPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

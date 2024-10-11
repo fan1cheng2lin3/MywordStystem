@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="word2.aspx.cs" Inherits="Card_word2" %>
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeFile="word3.aspx.cs" Inherits="Card_word2" %>
 
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -59,4 +59,4 @@
     </div>
 
 </body>
-</html>
+</html>--%>
