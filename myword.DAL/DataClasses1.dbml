@@ -1,8 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MyWord" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=MyWord;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="myword.DAL.Properties.Settings" SettingsPropertyName="MyWordConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.[00allwords]" Member="_00allwords">
-    <Type Name="_00allwords">
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+  <Table Name="dbo.user_Table" Member="user_Table">
+    <Type Name="user_Table">
+      <Column Name="Userid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.word" Member="word">
+    <Type Name="word">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.wordpre" Member="wordpre">
@@ -25,559 +41,334 @@
       <Column Name="exampletranslation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[01primarySchool]" Member="_01primarySchool">
-    <Type Name="_01primarySchool">
+  <Table Name="dbo.View_AssociateDegree" Member="View_AssociateDegree">
+    <Type Name="View_AssociateDegree">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[02middleSchool]" Member="_02middleSchool">
-    <Type Name="_02middleSchool">
+  <Table Name="dbo.View_Workplace" Member="View_Workplace">
+    <Type Name="View_Workplace">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[03highSchool]" Member="_03highSchool">
-    <Type Name="_03highSchool">
+  <Table Name="dbo.View_Bachelor" Member="View_Bachelor">
+    <Type Name="View_Bachelor">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[04cet4]" Member="_04cet4">
-    <Type Name="_04cet4">
+  <Table Name="dbo.View_Base" Member="View_Base">
+    <Type Name="View_Base">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[05cet6]" Member="_05cet6">
-    <Type Name="_05cet6">
+  <Table Name="dbo.View_Business" Member="View_Business">
+    <Type Name="View_Business">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[06yanjiusheng]" Member="_06yanjiusheng">
-    <Type Name="_06yanjiusheng">
+  <Table Name="dbo.View_CET4" Member="View_CET4">
+    <Type Name="View_CET4">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[07boshi]" Member="_07boshi">
-    <Type Name="_07boshi">
+  <Table Name="dbo.View_CET6" Member="View_CET6">
+    <Type Name="View_CET6">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[08zhuansi]" Member="_08zhuansi">
-    <Type Name="_08zhuansi">
+  <Table Name="dbo.View_Computer" Member="View_Computer">
+    <Type Name="View_Computer">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[09zhuanba]" Member="_09zhuanba">
-    <Type Name="_09zhuanba">
+  <Table Name="dbo.View_Dating" Member="View_Dating">
+    <Type Name="View_Dating">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[10gonggong5]" Member="_10gonggong5">
-    <Type Name="_10gonggong5">
+  <Table Name="dbo.View_Doctor" Member="View_Doctor">
+    <Type Name="View_Doctor">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[11yasi]" Member="_11yasi">
-    <Type Name="_11yasi">
+  <Table Name="dbo.View_GMAT" Member="View_GMAT">
+    <Type Name="View_GMAT">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[12tuofu]" Member="_12tuofu">
-    <Type Name="_12tuofu">
+  <Table Name="dbo.View_Graduate" Member="View_Graduate">
+    <Type Name="View_Graduate">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[13mba]" Member="_13mba">
-    <Type Name="_13mba">
+  <Table Name="dbo.View_GRE" Member="View_GRE">
+    <Type Name="View_GRE">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[14gre]" Member="_14gre">
-    <Type Name="_14gre">
+  <Table Name="dbo.View_HighSchool" Member="View_HighSchool">
+    <Type Name="View_HighSchool">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[15sat]" Member="_15sat">
-    <Type Name="_15sat">
+  <Table Name="dbo.View_IELTS" Member="View_IELTS">
+    <Type Name="View_IELTS">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[16gmat]" Member="_16gmat">
-    <Type Name="_16gmat">
+  <Table Name="dbo.View_JobHunting" Member="View_JobHunting">
+    <Type Name="View_JobHunting">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[17zhichang]" Member="_17zhichang">
-    <Type Name="_17zhichang">
+  <Table Name="dbo.View_MBA" Member="View_MBA">
+    <Type Name="View_MBA">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[18qiuzhi]" Member="_18qiuzhi">
-    <Type Name="_18qiuzhi">
+  <Table Name="dbo.View_Medical" Member="View_Medical">
+    <Type Name="View_Medical">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[19shangwu]" Member="_19shangwu">
-    <Type Name="_19shangwu">
+  <Table Name="dbo.View_MiddleSchool" Member="View_MiddleSchool">
+    <Type Name="View_MiddleSchool">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[20waimao]" Member="_20waimao">
-    <Type Name="_20waimao">
+  <Table Name="dbo.View_Phone" Member="View_Phone">
+    <Type Name="View_Phone">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[21yixue]" Member="_21yixue">
-    <Type Name="_21yixue">
+  <Table Name="dbo.View_PrimarySchool" Member="View_PrimarySchool">
+    <Type Name="View_PrimarySchool">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[22jiaoyou]" Member="_22jiaoyou">
-    <Type Name="_22jiaoyou">
+  <Table Name="dbo.View_PublicService" Member="View_PublicService">
+    <Type Name="View_PublicService">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[23dianhua]" Member="_23dianhua">
-    <Type Name="_23dianhua">
+  <Table Name="dbo.View_SAT" Member="View_SAT">
+    <Type Name="View_SAT">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[24jisuanji]" Member="_24jisuanji">
-    <Type Name="_24jisuanji">
+  <Table Name="dbo.View_Super" Member="View_Super">
+    <Type Name="View_Super">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[25base]" Member="_25base">
-    <Type Name="_25base">
+  <Table Name="dbo.View_TOEFL" Member="View_TOEFL">
+    <Type Name="View_TOEFL">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.[26super]" Member="_26super">
-    <Type Name="_26super">
+  <Table Name="dbo.View_Trade" Member="View_Trade">
+    <Type Name="View_Trade">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="delete_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="add_" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="count_liulan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_tingdanci" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="count_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_yingzhong" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_zhongying" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_wanzheng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="score_pipei" Type="System.Double" DbType="Float" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.[27etyma]" Member="_27etyma">
-    <Type Name="_27etyma">
-      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="phonetic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="explain" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="etyma" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.etyma" Member="etyma">
-    <Type Name="etyma">
-      <Column Name="id" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="word" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="phonetic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="explain" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="etyma" Member="etyma1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.user_Table" Member="user_Table">
-    <Type Name="user_Table">
-      <Column Name="Userid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.word" Member="word">
-    <Type Name="word">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />

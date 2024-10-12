@@ -1,16 +1,25 @@
 ﻿/* 引入需要的字体 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+/* 搜索框样式 */
 #searchInput {
     width: 200px;
     padding: 8px;
     margin: 10px;
 }
 
-#searchButton {
+#searchButton, #backButton {
     padding: 8px 16px;
     margin: 10px;
     cursor: pointer;
+}
+
+/* 图片按钮样式 */
+.dictionary-image {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin: 10px;
 }
 
 #searchResults div {

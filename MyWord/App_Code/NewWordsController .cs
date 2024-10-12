@@ -19,8 +19,10 @@ public class NewWordsController : ApiController
 
     // POST: api/newwords
     [HttpPost]
-    public IHttpActionResult AddNewWord(WordPre word)
+    public IHttpActionResult AddNewWord(Word Wordpre)
     {
         return Ok(); // 返回成功响应
     }
+
+
 }
