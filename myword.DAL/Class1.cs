@@ -8,5 +8,6 @@ namespace myword.DAL
 {
     public class Class1
     {
+
     }
 }

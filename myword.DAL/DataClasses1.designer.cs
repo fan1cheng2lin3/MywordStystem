@@ -116,14 +116,6 @@ namespace myword.DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<View_Base> View_Base
-		{
-			get
-			{
-				return this.GetTable<View_Base>();
-			}
-		}
-		
 		public System.Data.Linq.Table<View_Business> View_Business
 		{
 			get
@@ -297,6 +289,14 @@ namespace myword.DAL
 			get
 			{
 				return this.GetTable<View_Trade>();
+			}
+		}
+		
+		public System.Data.Linq.Table<View_Base> View_Base
+		{
+			get
+			{
+				return this.GetTable<View_Base>();
 			}
 		}
 	}
@@ -1351,177 +1351,6 @@ namespace myword.DAL
 		private string _ancillary;
 		
 		public View_Bachelor()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this._id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wordpre", DbType="NVarChar(255)")]
-		public string wordpre
-		{
-			get
-			{
-				return this._wordpre;
-			}
-			set
-			{
-				if ((this._wordpre != value))
-				{
-					this._wordpre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonetic", DbType="NVarChar(255)")]
-		public string phonetic
-		{
-			get
-			{
-				return this._phonetic;
-			}
-			set
-			{
-				if ((this._phonetic != value))
-				{
-					this._phonetic = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonetic_uk", DbType="NVarChar(255)")]
-		public string phonetic_uk
-		{
-			get
-			{
-				return this._phonetic_uk;
-			}
-			set
-			{
-				if ((this._phonetic_uk != value))
-				{
-					this._phonetic_uk = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_explain", DbType="NVarChar(255)")]
-		public string explain
-		{
-			get
-			{
-				return this._explain;
-			}
-			set
-			{
-				if ((this._explain != value))
-				{
-					this._explain = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_etyma", DbType="NVarChar(255)")]
-		public string etyma
-		{
-			get
-			{
-				return this._etyma;
-			}
-			set
-			{
-				if ((this._etyma != value))
-				{
-					this._etyma = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_en", DbType="NVarChar(255)")]
-		public string sentence_en
-		{
-			get
-			{
-				return this._sentence_en;
-			}
-			set
-			{
-				if ((this._sentence_en != value))
-				{
-					this._sentence_en = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_cn", DbType="NVarChar(255)")]
-		public string sentence_cn
-		{
-			get
-			{
-				return this._sentence_cn;
-			}
-			set
-			{
-				if ((this._sentence_cn != value))
-				{
-					this._sentence_cn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ancillary", DbType="NVarChar(255)")]
-		public string ancillary
-		{
-			get
-			{
-				return this._ancillary;
-			}
-			set
-			{
-				if ((this._ancillary != value))
-				{
-					this._ancillary = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_Base")]
-	public partial class View_Base
-	{
-		
-		private int _id;
-		
-		private string _wordpre;
-		
-		private string _phonetic;
-		
-		private string _phonetic_uk;
-		
-		private string _explain;
-		
-		private string _etyma;
-		
-		private string _sentence_en;
-		
-		private string _sentence_cn;
-		
-		private string _ancillary;
-		
-		public View_Base()
 		{
 		}
 		
@@ -5284,6 +5113,177 @@ namespace myword.DAL
 		private string _ancillary;
 		
 		public View_Trade()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wordpre", DbType="NVarChar(255)")]
+		public string wordpre
+		{
+			get
+			{
+				return this._wordpre;
+			}
+			set
+			{
+				if ((this._wordpre != value))
+				{
+					this._wordpre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonetic", DbType="NVarChar(255)")]
+		public string phonetic
+		{
+			get
+			{
+				return this._phonetic;
+			}
+			set
+			{
+				if ((this._phonetic != value))
+				{
+					this._phonetic = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonetic_uk", DbType="NVarChar(255)")]
+		public string phonetic_uk
+		{
+			get
+			{
+				return this._phonetic_uk;
+			}
+			set
+			{
+				if ((this._phonetic_uk != value))
+				{
+					this._phonetic_uk = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_explain", DbType="NVarChar(255)")]
+		public string explain
+		{
+			get
+			{
+				return this._explain;
+			}
+			set
+			{
+				if ((this._explain != value))
+				{
+					this._explain = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_etyma", DbType="NVarChar(255)")]
+		public string etyma
+		{
+			get
+			{
+				return this._etyma;
+			}
+			set
+			{
+				if ((this._etyma != value))
+				{
+					this._etyma = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_en", DbType="NVarChar(255)")]
+		public string sentence_en
+		{
+			get
+			{
+				return this._sentence_en;
+			}
+			set
+			{
+				if ((this._sentence_en != value))
+				{
+					this._sentence_en = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sentence_cn", DbType="NVarChar(255)")]
+		public string sentence_cn
+		{
+			get
+			{
+				return this._sentence_cn;
+			}
+			set
+			{
+				if ((this._sentence_cn != value))
+				{
+					this._sentence_cn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ancillary", DbType="NVarChar(255)")]
+		public string ancillary
+		{
+			get
+			{
+				return this._ancillary;
+			}
+			set
+			{
+				if ((this._ancillary != value))
+				{
+					this._ancillary = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_Base")]
+	public partial class View_Base
+	{
+		
+		private int _id;
+		
+		private string _wordpre;
+		
+		private string _phonetic;
+		
+		private string _phonetic_uk;
+		
+		private string _explain;
+		
+		private string _etyma;
+		
+		private string _sentence_en;
+		
+		private string _sentence_cn;
+		
+		private string _ancillary;
+		
+		public View_Base()
 		{
 		}
 		

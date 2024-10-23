@@ -80,19 +80,6 @@
       <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.View_Base" Member="View_Base">
-    <Type Name="View_Base">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.View_Business" Member="View_Business">
     <Type Name="View_Business">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -368,6 +355,19 @@
   </Table>
   <Table Name="dbo.View_Trade" Member="View_Trade">
     <Type Name="View_Trade">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="phonetic_uk" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="explain" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="etyma" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sentence_cn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Base" Member="View_Base">
+    <Type Name="View_Base">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="wordpre" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="phonetic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />

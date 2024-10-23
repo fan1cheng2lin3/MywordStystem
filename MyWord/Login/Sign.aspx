@@ -6,8 +6,6 @@
     <meta charset="UTF-8">
     <title>注册</title>
     <link rel="stylesheet" href="../CSS/style.css">
-
-
     <style>
 
         .validator-style {
