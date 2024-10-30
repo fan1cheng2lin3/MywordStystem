@@ -27,3 +27,10 @@
     padding: 10px;
     margin-top: 10px;
 }
+
+.word-box {
+    border: 1px solid #000; /* 黑色边框 */
+    padding: 10px; /* 内边距 */
+    margin-bottom: 10px; /* 每个框之间的外边距 */
+    border-radius: 5px; /* 边框圆角 */
+}

@@ -24,6 +24,7 @@ namespace myword.BLL
             db.SubmitChanges();
         }
 
+
         public bool IsNameExist(string name)
         {
             user_Table customer = (from c in db.user_Table

@@ -49,7 +49,8 @@
             }
             if (currentIndex < cikuwords.length) {
                 const currentWord = cikuwords[currentIndex]; // 获取当前单词
-                document.getElementById('cidianDiv').innerHTML = `<h2>${currentWord.Wordpre}</h2>`;
+                document.getElementById('cidianDiv').innerHTML = `<h2>${currentWord.Wordpre}</h2>
+                <p>${currentWord.Explanation2}<p>`;
             }
         }
     </script>

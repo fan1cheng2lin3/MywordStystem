@@ -30,10 +30,15 @@ function displayAllWords() {
 
     cikuwords.forEach(word => {
         const wordDiv = document.createElement('div');
-        wordDiv.innerHTML = `<h2>${word.Wordpre}</h2>`;
+        wordDiv.className = 'word-box'; // 给容器添加一个类名，以便可以通过CSS来定义样式
+        wordDiv.innerHTML = `
+                <h2>${word.Wordpre}</h2>
+                <p>${word.Explanation2 || "无"}</p>
+            `;
         cidianDiv.appendChild(wordDiv);  // 添加到页面中
     });
 }
+
 
 // 隐藏图片按钮
 function hideImageButtons() {

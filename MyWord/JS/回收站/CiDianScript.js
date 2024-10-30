@@ -27,7 +27,8 @@ function displayAllWords() {
 
     cikuwords.forEach(word => {
         const wordDiv = document.createElement('div');
-        wordDiv.innerHTML = `<h2>${word.Wordpre}</h2>`;
+        wordDiv.innerHTML = `<h2>${word.Wordpre}</h2>
+        <p>${word.Explanation2}<p>`;
         cidianDiv.appendChild(wordDiv);  // 添加到页面中
     });
 }

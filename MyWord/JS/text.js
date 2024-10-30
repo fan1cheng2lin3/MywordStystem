@@ -27,7 +27,8 @@
         }
         if (currentIndex < words.length) {
             const currentWord = words[currentIndex]; // 获取当前单词
-            cidianDiv.innerHTML = `<h2>${currentWord.Wordpre}</h2>`;
+            cidianDiv.innerHTML = `<h2>${currentWord.Wordpre}</h2>
+             <p>${currentWord.Explanation2 || "无"}</p>`;
         }
     }
 }); // 闭合事件监听器函数

@@ -26,13 +26,13 @@
 
         var IsLoggedIn = <%= IsLoggedIn ? "true" : "false" %>;
         function handleAvatarClick() {
-
             if (/* 用户登录状态 */ IsLoggedIn) {
                 toggleDropdown();
             } else {
                 window.location.href = "Login/Login.aspx";
             }
         }
+
         function toggleDropdown() {
             var dropdownMenu = document.getElementById("dropdownMenu");
             dropdownMenu.classList.toggle("show");
@@ -40,6 +40,14 @@
 
         function topage(page2) {
             window.location.href = 'Login/' + page2 + '.aspx';
+        }
+
+        function updateContentIfLoggedIn(content,isPage = false) {
+            if (IsLoggedIn) {
+                updateContent(content, isPage);
+            } else {
+                topage('Login');
+            }
         }
 
         function updateContent(content, isPage = false) {
@@ -61,10 +69,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div class="menu">
-
+        
         <a href="javascript:void(0);" onclick="updateContent('这是首页');">首页</a>
-        <a href="javascript:void(0);" onclick="updateContent('这是资讯');">资讯</a>
-        <a href="javascript:void(0);" onclick="updateContent('yemian/word.aspx', true);">卡牌</a>
+        <a href="javascript:void(0);" onclick="updateContentIfLoggedIn('这是数据');">数据</a>
+        <a href="javascript:void(0);" onclick="updateContentIfLoggedIn('yemian/word.aspx', true);">卡牌</a>
         <a href="javascript:void(0);" onclick="updateContent('yemian/Ciku.aspx', true);">词库</a>
         <a href="javascript:void(0);" onclick="updateContent('这是关于');">关于</a>
         <hr color="red" />
@@ -75,6 +83,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <div class="content" id="content">
         天上月华人如愿 | 1.2版本资讯说明
+        <asp:Label ID="lblUserId" runat="server" Text="用户未登录"></asp:Label>
 
     </div>
 

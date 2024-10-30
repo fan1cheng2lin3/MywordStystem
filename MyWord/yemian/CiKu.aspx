@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="../CSS/CiKuStyle.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
     <script src="../JS/CiKuScript.js"></script>
-    <script src="../JS/回收站/CiDianScript.js"></script>
+    <%--<script src="../JS/回收站/CiDianScript.js"></script>--%>
+
+
+
 </head>
 
 <body>
+
     <!-- 搜索框和按钮 -->
     <input type="text" id="searchInput" placeholder="输入单词进行搜索">
     <button id="searchButton">搜索</button>
@@ -53,13 +57,9 @@
     <img src="bachelor.png" alt="TOEFL" onclick="fetchWords('View_TOEFL')" class="dictionary-image">
     <img src="bachelor.png" alt="Trade" onclick="fetchWords('View_Trade')" class="dictionary-image">
     <img src="bachelor.png" alt="Workplace" onclick="fetchWords('View_Workplace')" class="dictionary-image">
-
     </div>
 
 
-
-
-   
     <!-- 搜索结果部分 -->
     <div id="searchResults" style="display:none;"></div>
 

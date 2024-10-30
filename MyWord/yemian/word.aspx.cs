@@ -23,6 +23,7 @@ public partial class Card_word2 : System.Web.UI.Page
         //        LoadCurrentWord();
         //    }
         //}
+       
 
         if (!IsPostBack)
         {
@@ -39,6 +40,8 @@ public partial class Card_word2 : System.Web.UI.Page
             }
         }
     }
+
+  
 
     private void LoadCurrentWord()
     {

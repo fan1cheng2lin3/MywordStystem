@@ -25,6 +25,17 @@ namespace Namespace
             }
         }
 
+        public int CurrentUserId
+        {
+            get
+            {
+                if (Session["Userid"] != null)
+                {
+                    return (int)Session["Userid"];
+                }
+                return -1; // 如果没有用户登录，返回一个无效的ID
+            }
+        }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
@@ -75,6 +86,15 @@ namespace Namespace
         {
 
             Response.Redirect("GetPwd.aspx");
+        }
+
+        public bool IsLoggedIn
+        {
+            get
+            {
+                // 这里检查用户是否登录，例如检查Session中的值
+                return Session["LoggedIn"] != null && (bool)Session["LoggedIn"];
+            }
         }
     }
 }
