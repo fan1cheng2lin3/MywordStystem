@@ -10,12 +10,15 @@
     <title>学习卡牌</title>
     <link rel="stylesheet" href="../CSS/CardStyle.css">
     <script src="../JS/CardScript.js"></script>
-    <%--<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>--%>
+    <%--<script src="../JS/text.js"></script>--%>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
 
 <body>
+    <input type="hidden" id="user-id" value="3"> <!-- 这里的值应该是用户ID -->
+
     <div class="container-wrapper">
 
 

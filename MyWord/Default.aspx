@@ -64,6 +64,8 @@
             }
         }
 
+      
+
     </script>
 </asp:Content>
 
@@ -76,7 +78,6 @@
         <a href="javascript:void(0);" onclick="updateContent('yemian/Ciku.aspx', true);">词库</a>
         <a href="javascript:void(0);" onclick="updateContent('这是关于');">关于</a>
         <hr color="red" />
-
     </div>
 
 </asp:Content>
@@ -84,7 +85,7 @@
     <div class="content" id="content">
         天上月华人如愿 | 1.2版本资讯说明
         <asp:Label ID="lblUserId" runat="server" Text="用户未登录"></asp:Label>
-
+       
     </div>
 
     <%--    <button class="button" onclick="updateContent('欢迎回来！')">

@@ -379,4 +379,17 @@
       <Column Name="ancillary" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.progress" Member="progress">
+    <Type Name="progress">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WordId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="false" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="true" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lasttime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="lost" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

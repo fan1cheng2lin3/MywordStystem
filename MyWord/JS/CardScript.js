@@ -29,6 +29,8 @@
             console.error("Error fetching words:", error);
         });
 
+        
+
     // 加载当前单词
     function loadCurrentWord() {
         if (!words || words.length === 0) {
@@ -60,6 +62,7 @@
 
             answerDiv.innerHTML = `
             <h1>${currentWord.Wordpre || 'No Word'}</h2>
+            <h1>${currentWord.Id || 'No Word'}</h2>
             <p>美式: ${currentWord.Phonetic || 'No Sound Mark'}</p>
             <p>英式: ${currentWord.PhoneticUK || 'No Sound Mark'}</p>
             <p>翻译: ${currentWord.Explanation2 || 'No Translation'}</p>
@@ -130,23 +133,48 @@
         toggleButtons('hide');
     });
 
-    // 简单按钮事件
+   
+
     easyBtn.addEventListener('click', () => {
+        updateScore(3); // 简单评分为3
         showSpellInput();
         hideReviewButtons();
     });
 
-    // 重来按钮事件
     retryBtn.addEventListener('click', () => {
+        updateScore(1); // 重来评分为1
         showSpellInput();
         hideReviewButtons();
     });
 
-    // 良好按钮事件
     goodBtn.addEventListener('click', () => {
+        updateScore(2); // 良好评分为2
         showSpellInput();
         hideReviewButtons();
     });
+    function updateScore(score) {
+        const userId = document.getElementById('user-id').value; // 确保获取了userId
+        const wordId = words[currentIndex].Id;
+
+        const requestData = {
+            userId: userId,
+            wordId: wordId,
+            score: score
+        };
+
+        console.log('Sending score update request:', requestData);
+
+        axios.post('/api/propress/score', requestData)
+            .then(response => {
+                console.log("Score updated:", response.data);
+            })
+            .catch(error => {
+                console.error("Error updating score:", error.response ? error.response.data : error.message);
+            });
+    }
+
+
+
 
     // 显示拼写框
     function showSpellInput() {
@@ -157,6 +185,7 @@
         spellInput.value = '';  // 清空之前的输入
         spellMessage.classList.add('hidden');  // 隐藏提示信息
     }
+
 
     // 隐藏所有评价按钮
     function hideReviewButtons() {
@@ -175,6 +204,7 @@
             reviewButtons.classList.remove('hidden');
         }
     }
+
 
     // 重置卡片为初始状态
     function resetCard() {
@@ -206,6 +236,5 @@
             event.preventDefault();  // 阻止默认行为，如表单提交
         }
     });
-
-
+    
 });

@@ -36,6 +36,9 @@ namespace myword.DAL
     partial void Insertword(word instance);
     partial void Updateword(word instance);
     partial void Deleteword(word instance);
+    partial void Insertprogress(progress instance);
+    partial void Updateprogress(progress instance);
+    partial void Deleteprogress(progress instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -297,6 +300,14 @@ namespace myword.DAL
 			get
 			{
 				return this.GetTable<View_Base>();
+			}
+		}
+		
+		public System.Data.Linq.Table<progress> progress
+		{
+			get
+			{
+				return this.GetTable<progress>();
 			}
 		}
 	}
@@ -5428,6 +5439,260 @@ namespace myword.DAL
 				{
 					this._ancillary = value;
 				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.progress")]
+	public partial class progress : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private System.Nullable<int> _UserId;
+		
+		private System.Nullable<int> _WordId;
+		
+		private System.Nullable<int> _count;
+		
+		private System.Nullable<int> _false;
+		
+		private System.Nullable<int> _true;
+		
+		private System.Nullable<System.TimeSpan> _lasttime;
+		
+		private System.Nullable<double> _lost;
+		
+		private System.Nullable<int> _Score;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnUserIdChanging(System.Nullable<int> value);
+    partial void OnUserIdChanged();
+    partial void OnWordIdChanging(System.Nullable<int> value);
+    partial void OnWordIdChanged();
+    partial void OncountChanging(System.Nullable<int> value);
+    partial void OncountChanged();
+    partial void OnfalseChanging(System.Nullable<int> value);
+    partial void OnfalseChanged();
+    partial void OntrueChanging(System.Nullable<int> value);
+    partial void OntrueChanged();
+    partial void OnlasttimeChanging(System.Nullable<System.TimeSpan> value);
+    partial void OnlasttimeChanged();
+    partial void OnlostChanging(System.Nullable<double> value);
+    partial void OnlostChanged();
+    partial void OnScoreChanging(System.Nullable<int> value);
+    partial void OnScoreChanged();
+    #endregion
+		
+		public progress()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int")]
+		public System.Nullable<int> UserId
+		{
+			get
+			{
+				return this._UserId;
+			}
+			set
+			{
+				if ((this._UserId != value))
+				{
+					this.OnUserIdChanging(value);
+					this.SendPropertyChanging();
+					this._UserId = value;
+					this.SendPropertyChanged("UserId");
+					this.OnUserIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WordId", DbType="Int")]
+		public System.Nullable<int> WordId
+		{
+			get
+			{
+				return this._WordId;
+			}
+			set
+			{
+				if ((this._WordId != value))
+				{
+					this.OnWordIdChanging(value);
+					this.SendPropertyChanging();
+					this._WordId = value;
+					this.SendPropertyChanged("WordId");
+					this.OnWordIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Int")]
+		public System.Nullable<int> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this.OncountChanging(value);
+					this.SendPropertyChanging();
+					this._count = value;
+					this.SendPropertyChanged("count");
+					this.OncountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="false", Storage="_false", DbType="Int")]
+		public System.Nullable<int> @false
+		{
+			get
+			{
+				return this._false;
+			}
+			set
+			{
+				if ((this._false != value))
+				{
+					this.OnfalseChanging(value);
+					this.SendPropertyChanging();
+					this._false = value;
+					this.SendPropertyChanged("@false");
+					this.OnfalseChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="true", Storage="_true", DbType="Int")]
+		public System.Nullable<int> @true
+		{
+			get
+			{
+				return this._true;
+			}
+			set
+			{
+				if ((this._true != value))
+				{
+					this.OntrueChanging(value);
+					this.SendPropertyChanging();
+					this._true = value;
+					this.SendPropertyChanged("@true");
+					this.OntrueChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lasttime", DbType="Time")]
+		public System.Nullable<System.TimeSpan> lasttime
+		{
+			get
+			{
+				return this._lasttime;
+			}
+			set
+			{
+				if ((this._lasttime != value))
+				{
+					this.OnlasttimeChanging(value);
+					this.SendPropertyChanging();
+					this._lasttime = value;
+					this.SendPropertyChanged("lasttime");
+					this.OnlasttimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lost", DbType="Float")]
+		public System.Nullable<double> lost
+		{
+			get
+			{
+				return this._lost;
+			}
+			set
+			{
+				if ((this._lost != value))
+				{
+					this.OnlostChanging(value);
+					this.SendPropertyChanging();
+					this._lost = value;
+					this.SendPropertyChanged("lost");
+					this.OnlostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Score", DbType="Int")]
+		public System.Nullable<int> Score
+		{
+			get
+			{
+				return this._Score;
+			}
+			set
+			{
+				if ((this._Score != value))
+				{
+					this.OnScoreChanging(value);
+					this.SendPropertyChanging();
+					this._Score = value;
+					this.SendPropertyChanged("Score");
+					this.OnScoreChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
