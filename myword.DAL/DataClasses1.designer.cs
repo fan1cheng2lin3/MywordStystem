@@ -30,12 +30,12 @@ namespace myword.DAL
 		
     #region 可扩展性方法定义
     partial void OnCreated();
-    partial void Insertuser_Table(user_Table instance);
-    partial void Updateuser_Table(user_Table instance);
-    partial void Deleteuser_Table(user_Table instance);
     partial void Insertword(word instance);
     partial void Updateword(word instance);
     partial void Deleteword(word instance);
+    partial void Insertuser_Table(user_Table instance);
+    partial void Updateuser_Table(user_Table instance);
+    partial void Deleteuser_Table(user_Table instance);
     partial void Insertprogress(progress instance);
     partial void Updateprogress(progress instance);
     partial void Deleteprogress(progress instance);
@@ -69,14 +69,6 @@ namespace myword.DAL
 				base(connection, mappingSource)
 		{
 			OnCreated();
-		}
-		
-		public System.Data.Linq.Table<user_Table> user_Table
-		{
-			get
-			{
-				return this.GetTable<user_Table>();
-			}
 		}
 		
 		public System.Data.Linq.Table<word> word
@@ -303,145 +295,19 @@ namespace myword.DAL
 			}
 		}
 		
+		public System.Data.Linq.Table<user_Table> user_Table
+		{
+			get
+			{
+				return this.GetTable<user_Table>();
+			}
+		}
+		
 		public System.Data.Linq.Table<progress> progress
 		{
 			get
 			{
 				return this.GetTable<progress>();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.user_Table")]
-	public partial class user_Table : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Userid;
-		
-		private string _Name;
-		
-		private string _Password;
-		
-		private string _Email;
-		
-    #region 可扩展性方法定义
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnUseridChanging(int value);
-    partial void OnUseridChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnPasswordChanging(string value);
-    partial void OnPasswordChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    #endregion
-		
-		public user_Table()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Userid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Userid
-		{
-			get
-			{
-				return this._Userid;
-			}
-			set
-			{
-				if ((this._Userid != value))
-				{
-					this.OnUseridChanging(value);
-					this.SendPropertyChanging();
-					this._Userid = value;
-					this.SendPropertyChanged("Userid");
-					this.OnUseridChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this.OnNameChanging(value);
-					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50)")]
-		public string Password
-		{
-			get
-			{
-				return this._Password;
-			}
-			set
-			{
-				if ((this._Password != value))
-				{
-					this.OnPasswordChanging(value);
-					this.SendPropertyChanging();
-					this._Password = value;
-					this.SendPropertyChanged("Password");
-					this.OnPasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -5443,6 +5309,164 @@ namespace myword.DAL
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.user_Table")]
+	public partial class user_Table : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Userid;
+		
+		private string _Name;
+		
+		private string _Password;
+		
+		private string _Email;
+		
+		private string _Wordbook;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnUseridChanging(int value);
+    partial void OnUseridChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnWordbookChanging(string value);
+    partial void OnWordbookChanged();
+    #endregion
+		
+		public user_Table()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Userid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Userid
+		{
+			get
+			{
+				return this._Userid;
+			}
+			set
+			{
+				if ((this._Userid != value))
+				{
+					this.OnUseridChanging(value);
+					this.SendPropertyChanging();
+					this._Userid = value;
+					this.SendPropertyChanged("Userid");
+					this.OnUseridChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50)")]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this.OnPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Wordbook", DbType="NVarChar(50)")]
+		public string Wordbook
+		{
+			get
+			{
+				return this._Wordbook;
+			}
+			set
+			{
+				if ((this._Wordbook != value))
+				{
+					this.OnWordbookChanging(value);
+					this.SendPropertyChanging();
+					this._Wordbook = value;
+					this.SendPropertyChanged("Wordbook");
+					this.OnWordbookChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.progress")]
 	public partial class progress : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -5467,6 +5491,8 @@ namespace myword.DAL
 		
 		private System.Nullable<int> _Score;
 		
+		private string _Wordbook;
+		
     #region 可扩展性方法定义
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -5489,6 +5515,8 @@ namespace myword.DAL
     partial void OnlostChanged();
     partial void OnScoreChanging(System.Nullable<int> value);
     partial void OnScoreChanged();
+    partial void OnWordbookChanging(string value);
+    partial void OnWordbookChanged();
     #endregion
 		
 		public progress()
@@ -5672,6 +5700,26 @@ namespace myword.DAL
 					this._Score = value;
 					this.SendPropertyChanged("Score");
 					this.OnScoreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Wordbook", DbType="NVarChar(50)")]
+		public string Wordbook
+		{
+			get
+			{
+				return this._Wordbook;
+			}
+			set
+			{
+				if ((this._Wordbook != value))
+				{
+					this.OnWordbookChanging(value);
+					this.SendPropertyChanging();
+					this._Wordbook = value;
+					this.SendPropertyChanged("Wordbook");
+					this.OnWordbookChanged();
 				}
 			}
 		}

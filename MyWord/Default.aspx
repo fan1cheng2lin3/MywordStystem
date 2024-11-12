@@ -21,7 +21,6 @@
     <%--<uc1:UserControl runat="server" ID="UserControl" />--%>
 
 
-
     <script>
 
         var IsLoggedIn = <%= IsLoggedIn ? "true" : "false" %>;
@@ -50,6 +49,7 @@
             }
         }
 
+
         function updateContent(content, isPage = false) {
             var contentDiv = document.getElementById("content");
 
@@ -73,7 +73,7 @@
     <div class="menu">
         
         <a href="javascript:void(0);" onclick="updateContent('这是首页');">首页</a>
-        <a href="javascript:void(0);" onclick="updateContentIfLoggedIn('这是数据');">数据</a>
+        <a href="javascript:void(0);" onclick="updateContentIfLoggedIn('yemian/xuanzeye.aspx', true);">数据</a>
         <a href="javascript:void(0);" onclick="updateContentIfLoggedIn('yemian/word.aspx', true);">卡牌</a>
         <a href="javascript:void(0);" onclick="updateContent('yemian/Ciku.aspx', true);">词库</a>
         <a href="javascript:void(0);" onclick="updateContent('这是关于');">关于</a>

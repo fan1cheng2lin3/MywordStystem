@@ -11,6 +11,8 @@ namespace myword.BLL
         // 更新进度表中的单词评分
         public bool UpdateWordScore(int userId, int wordId, int score)
         {
+
+
             try
             {
                 // 查找进度表中的记录
@@ -28,8 +30,10 @@ namespace myword.BLL
                     {
                         UserId = userId,
                         WordId = wordId,
-                        Score = score
+                        Score = score,
                     };
+
+
                     db.progress.InsertOnSubmit(newProgressRecord);
                 }
                 db.SubmitChanges();  // 保存更改到数据库
@@ -39,6 +43,34 @@ namespace myword.BLL
             {
                 // 在日志中记录错误信息，这里使用Console.WriteLine仅作为示例
                 // 在实际应用中，您可能需要使用日志框架，如NLog或log4net
+                Console.WriteLine("Error updating score in progress table: " + ex.Message);
+                return false;
+            }
+        }
+
+
+        public bool UpdateWordBook(int userId, string wordbook)
+        {
+            try
+            {
+                var wordbookRecord = db.user_Table.SingleOrDefault(p => p.Userid == userId);
+
+                if (wordbookRecord == null)
+                {
+                    // 如果没有找到记录，创建一个新的记录
+                    wordbookRecord = new user_Table { Userid = userId };
+                    db.user_Table.InsertOnSubmit(wordbookRecord);
+                }
+
+                // 更新 Wordbook 属性
+                wordbookRecord.Wordbook = wordbook;
+
+                db.SubmitChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine("Error updating score in progress table: " + ex.Message);
                 return false;
             }

@@ -12,3 +12,7 @@ C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\obj\
 C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\obj\Debug\myword.DAL.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\obj\Debug\myword.DAL.dll
 C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\obj\Debug\myword.DAL.pdb
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\Administrator\Desktop\myword\代码源文件\WordSystem\myword.DAL\obj\Debug\myword.DAL.csproj.Up2Date

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../CSS/CardStyle.css">
     <script src="../JS/CardScript.js"></script>
     <%--<script src="../JS/text.js"></script>--%>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <%--<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>--%>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>

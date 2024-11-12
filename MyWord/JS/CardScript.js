@@ -16,7 +16,7 @@
     let correctWord = "";
 
     // 使用 AJAX 获取单词列表
-    axios.get('/api/newwords')
+    axios.get(`/api/words/View_CET4`)
         .then(function (response) {
             words = response.data;
             console.log("Fetched words:", words);
@@ -29,7 +29,16 @@
             console.error("Error fetching words:", error);
         });
 
-        
+    function fetchWords(viewName) {
+        axios.get(`/api/words/View_CET4`)
+            .then(function (response) {
+                words = response.data;
+                console.log("Fetched words from " +  + ":", cikuwords);
+            })
+            .catch(function (error) {
+                console.error("Error fetching words from " + viewName + ":", error);
+            });
+    }
 
     // 加载当前单词
     function loadCurrentWord() {
@@ -164,7 +173,7 @@
 
         console.log('Sending score update request:', requestData);
 
-        axios.post('/api/propress/score', requestData)
+        axios.post('/api/propress/score/updatescore', requestData)
             .then(response => {
                 console.log("Score updated:", response.data);
             })
