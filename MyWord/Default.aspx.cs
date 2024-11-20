@@ -11,6 +11,16 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+
+       
+        if (!IsPostBack)
+        {
+            if (Session["Userid"] != null)
+            {
+                userId.Value = Session["Userid"].ToString();  // 设置 userId 的值
+            }
+        }
+
         if (!IsPostBack)
         {
             if (Session["Userid"] != null)

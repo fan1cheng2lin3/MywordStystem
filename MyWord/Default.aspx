@@ -10,7 +10,6 @@
     </div>
 
 
-
     <div class="dropdown-content" id="dropdownMenu">
         <a href="#" onclick=" topage('ChangePwd')">个人资料</a>
         <a href="#" onclick=" topage('ChangePwd')">修改密码</a>
@@ -20,8 +19,9 @@
 
     <%--<uc1:UserControl runat="server" ID="UserControl" />--%>
 
-
     <script>
+
+      <%--  ////var userId = '<%= Session["Userid"] %>';--%>
 
         var IsLoggedIn = <%= IsLoggedIn ? "true" : "false" %>;
         function handleAvatarClick() {
@@ -64,8 +64,6 @@
             }
         }
 
-      
-
     </script>
 </asp:Content>
 
@@ -73,8 +71,8 @@
     <div class="menu">
         
         <a href="javascript:void(0);" onclick="updateContent('这是首页');">首页</a>
-        <a href="javascript:void(0);" onclick="updateContentIfLoggedIn('yemian/xuanzeye.aspx', true);">数据</a>
-        <a href="javascript:void(0);" onclick="updateContentIfLoggedIn('yemian/word.aspx', true);">卡牌</a>
+        <a href="javascript:void(0);" onclick="updateContentIfLoggedIn('yemian/Shujvye.aspx', true);">数据</a>
+        <a href="javascript:void(0);" onclick="updateContentIfLoggedIn('yemian/xuanzeye.aspx', true);">卡牌</a>
         <a href="javascript:void(0);" onclick="updateContent('yemian/Ciku.aspx', true);">词库</a>
         <a href="javascript:void(0);" onclick="updateContent('这是关于');">关于</a>
         <hr color="red" />
@@ -85,6 +83,9 @@
     <div class="content" id="content">
         天上月华人如愿 | 1.2版本资讯说明
         <asp:Label ID="lblUserId" runat="server" Text="用户未登录"></asp:Label>
+          <asp:HiddenField ID="userId" runat="server" />
+        <a href="Bin/roslyn/">Bin/roslyn/</a>
+
        
     </div>
 

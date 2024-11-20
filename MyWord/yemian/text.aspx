@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <input type="hidden" id="userId" runat="server" value="6" />
+    <%--<input type="hidden" id="userId" runat="server" value="6" />--%>
 
     <button class="btn text">xhu</button>
     <button class="xuexi">学习页</button>

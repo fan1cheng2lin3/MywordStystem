@@ -9,8 +9,120 @@ namespace myword.BLL
     {
         DataClasses1DataContext db = new DataClasses1DataContext();
 
+        public int GetUnlearnedWordCount(string wordbook, int userId)
+        {
+            // 获取所有单词的初始列表
+            var allWords = GetWordsByViewNameWithoutFilter(wordbook);
+      
+            // 获取用户已经学习过的单词ID列表
+            var learnedWordIds = db.progress
+                                    .Where(p => p.UserId == userId)
+                                     .Select(p => p.WordId)
+                                     .ToList();
+
+            // 计算未学习单词的数量
+            var unlearnedCount = allWords.Count - learnedWordIds.Count;
+
+            return unlearnedCount;
+        }
+
+
+
+
         // 通用方法：根据视图名称动态获取数据
         public List<CiKuWord> GetWordsByViewName(string viewName)
+        {
+            // 获取所有单词的初始列表
+            var allWords = GetWordsByViewNameWithoutFilter(viewName);
+
+            return allWords;
+        }
+
+
+
+        public List<CiKuWord> GetWordsByViewName(string viewName, int userId)
+        {
+            // 获取今天 UTC 的日期字符串
+            var todayString = DateTime.UtcNow.ToString("yyyy-MM-dd");
+
+            // 获取用户已经学习过的单词 ID 列表，排除当天数据
+            var learnedWordIds = db.progress
+                                    .Where(p => p.UserId == userId &&
+                                                p.lasttime.CompareTo(todayString) < 0)
+                                    .Select(p => p.WordId)
+                                    .ToList();
+
+            // 获取所有单词并过滤掉已学习的
+            var allWords = GetWordsByViewNameWithoutFilter(viewName);
+            var filteredWords = allWords.Where(w => !learnedWordIds.Contains(w.Id)).ToList();
+
+            return filteredWords;
+        }
+
+
+        public List<CiKuWord> GetfuxiWords(string viewName, int userId)
+        {
+            // 获取所有单词的初始列表
+            var allWords = GetWordsByViewNameWithoutFilter(viewName);
+
+            // 获取用户已经学习过的单词ID列表
+            var learnedWordIds = db.progress
+                                     .Where(p => p.UserId == userId)
+                                     .Select(p => p.WordId)
+                                     .ToList();
+
+            // 过滤掉已经学习过的单词
+            var filteredWords = allWords.Where(w => !learnedWordIds.Contains(w.Id)).ToList();
+
+            return filteredWords;
+        }
+
+
+
+        public List<CiKuWord> GetLearnedWordPreData(int userId)
+        {
+            //// 首先，从progress表中获取用户已经学习过的单词ID列表
+            //var learnedWordIds = db.progress
+            //                         .Where(p => p.UserId == userId)
+            //                         .Select(p => p.WordId)
+            //                         .ToList();
+
+
+            // 获取当前日期（UTC时间）
+            var todayString = DateTime.UtcNow.ToString("yyyy-MM-dd");
+
+
+            // 从progress表中获取用户已经学习过的单词ID列表，排除当天学习过的单词
+            var learnedWordIds = db.progress
+                                     .Where(p => p.UserId == userId &&
+                                        p.lasttime.CompareTo(todayString) < 0)
+                                     .Select(p => p.WordId)
+                                     .ToList();
+
+
+            // 使用 JOIN 查询来获取用户已经学习过的单词数据
+            var wordPreData = db.word
+                .Where(w => learnedWordIds.Contains(w.id))  // 只选择已学习的单词
+                .Select(w => new CiKuWord
+                {
+                    Id = w.id,
+                    Wordpre = w.wordpre,
+                    Phonetic = w.phonetic,
+                    PhoneticUK = w.phonetic_uk,
+                    Explanation2 = w.explain,
+                    Etyma = w.etyma,
+                    SentenceEN = w.sentence_en,
+                    SentenceCN = w.sentence_cn,
+                    Ancillary = w.ancillary
+                })
+                .ToList();
+
+            return wordPreData;
+        }
+
+     
+
+        private List<CiKuWord> GetWordsByViewNameWithoutFilter(string viewName)
         {
             // 根据不同视图名称选择相应的查询
             switch (viewName)
@@ -385,6 +497,8 @@ namespace myword.BLL
                     throw new ArgumentException("无效的视图名称");
             }
         }
+
+        
     }
 
     

@@ -5,7 +5,7 @@ let words = [];
 
 // 获取单词列表函数
 function fetchWords(viewName) {
-    axios.get(`/api/words/${viewName}`)
+    axios.get(`/api/cikuwords/${viewName}`)
         .then(function (response) {
             cikuwords = response.data;
             console.log("Fetched words from " + viewName + ":", cikuwords);

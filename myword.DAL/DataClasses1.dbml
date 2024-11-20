@@ -386,9 +386,8 @@
       <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="WordId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="count" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="false" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="true" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="lasttime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="FalseCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lasttime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="lost" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Score" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Wordbook" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />

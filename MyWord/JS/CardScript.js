@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", async () => {
     const showAnswerBtn = document.getElementById('show-answer-btn');
     const questionDiv = document.getElementById('question');
     const answerDiv = document.getElementById('answer');
@@ -15,29 +15,29 @@
     let currentIndex = 0;
     let correctWord = "";
 
-    // 使用 AJAX 获取单词列表
-    axios.get(`/api/words/View_CET4`)
-        .then(function (response) {
-            words = response.data;
-            console.log("Fetched words:", words);
+    const userId = document.getElementById('userId').value;  // 获取 HiddenField 中的 userId
+
+    try {
+        const response = await axios.get('/api/newwords/score/getWordbook', {
+            params: { userId: userId }
+        });
+        console.log("Wordbook fetched:", response.data);
+        const wordbook = response.data?.Wordbook?.trim();
+        if (wordbook) {
+            const wordsResponse = await axios.get(`/api/words/${wordbook}`, { params: { userId: userId } }); // 使用获取到的 wordbook 发起另一个请求
+            words = wordsResponse.data;
+            console.log("Fetched words data:", words);
 
             if (words.length > 0) {
                 loadCurrentWord();
+            } else {
+                console.error("No words available in response.");
             }
-        })
-        .catch(function (error) {
-            console.error("Error fetching words:", error);
-        });
-
-    function fetchWords(viewName) {
-        axios.get(`/api/words/View_CET4`)
-            .then(function (response) {
-                words = response.data;
-                console.log("Fetched words from " +  + ":", cikuwords);
-            })
-            .catch(function (error) {
-                console.error("Error fetching words from " + viewName + ":", error);
-            });
+        } else {
+            alert("未能获取到有效的 Wordbook 数据！");
+        }
+    } catch (error) {
+        console.error("Error fetching words or wordbook:", error);
     }
 
     // 加载当前单词
@@ -52,36 +52,32 @@
             console.log("Current word:", currentWord); // 检查这里是否为undefined
             questionDiv.innerHTML = `<h2>${currentWord.Explanation2}</h2>`;
 
-
             derivativeDiv.innerHTML = `
-            <dt style=font-size:40px >词根助记</dt>
+            <dt style="font-size:40px">词根助记</dt>
             <dl>
                 <dd>${formatEtyma(currentWord.Etyma || '空')}</dd>
             </dl>
-        `;
-
+            `;
 
             matchDiv.innerHTML = `
-            <dt style=font-size:40px >助记</dt>
+            <dt style="font-size:40px">助记</dt>
             <dl>
                 <dd>${formatEtyma(currentWord.Ancillary || '空')}</dd>
             </dl>
-        `;
-
-
+            `;
+            //         <button onclick="speak('${currentWord.Phonetic}')">美式发音</button>
+            //<button onclick="speak('${currentWord.PhoneticUK}')">英式发音</button>
             answerDiv.innerHTML = `
-            <h1>${currentWord.Wordpre || 'No Word'}</h2>
-            <h1>${currentWord.Id || 'No Word'}</h2>
+            <h1>${currentWord.Wordpre || 'No Word'}</h1>
             <p>美式: ${currentWord.Phonetic || 'No Sound Mark'}</p>
             <p>英式: ${currentWord.PhoneticUK || 'No Sound Mark'}</p>
+   
             <p>翻译: ${currentWord.Explanation2 || 'No Translation'}</p>
             <p>例子: ${currentWord.SentenceEN || 'No Example'}</p>
             <p>例子翻译: ${currentWord.SentenceCN || 'No Example Translation'}</p>
-        `;
-        
-            correctWord = (currentWord.Wordpre || '').trim(); // 使用 || 操作符提供默认值
+            `;
 
-            
+            correctWord = (currentWord.Wordpre || '').trim(); // 使用 || 操作符提供默认值
             resetCard(); // 重置卡片状态
         } else {
             alert("所有单词已完成！");
@@ -112,8 +108,6 @@
         return formatted;
     }
 
-   
-
     // 键盘事件监听
     document.addEventListener('keydown', (event) => {
         console.log('Key pressed:', event.key);
@@ -142,8 +136,6 @@
         toggleButtons('hide');
     });
 
-   
-
     easyBtn.addEventListener('click', () => {
         updateScore(3); // 简单评分为3
         showSpellInput();
@@ -161,14 +153,17 @@
         showSpellInput();
         hideReviewButtons();
     });
+
     function updateScore(score) {
-        const userId = document.getElementById('user-id').value; // 确保获取了userId
+        const userId = document.getElementById('userId').value; // 确保获取了userId
         const wordId = words[currentIndex].Id;
+        const lasttime = new Date().toISOString(); // 获取当前时间并转换为ISO字符串格式
 
         const requestData = {
             userId: userId,
             wordId: wordId,
-            score: score
+            score: score,
+            lasttime: lasttime
         };
 
         console.log('Sending score update request:', requestData);
@@ -182,9 +177,6 @@
             });
     }
 
-
-
-
     // 显示拼写框
     function showSpellInput() {
         questionDiv.innerHTML = `<h2>${words[currentIndex].Phonetic}</h2>`;
@@ -194,7 +186,6 @@
         spellInput.value = '';  // 清空之前的输入
         spellMessage.classList.add('hidden');  // 隐藏提示信息
     }
-
 
     // 隐藏所有评价按钮
     function hideReviewButtons() {
@@ -214,7 +205,6 @@
         }
     }
 
-
     // 重置卡片为初始状态
     function resetCard() {
         questionDiv.classList.remove('hidden');
@@ -226,6 +216,9 @@
     }
 
     // 键盘事件监听，用于拼写检查
+    // 假设这个变量用于跟踪是否已经记录过错误
+    let hasRecordedError = false;
+
     spellInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
             const userInput = spellInput.value.trim().toLowerCase();
@@ -235,15 +228,71 @@
                 spellMessage.classList.remove('hidden');
                 showAnswerBtn.classList.remove('hidden');
                 currentIndex++;
+                hasRecordedError = false; // 重置错误记录状态
                 loadCurrentWord();  // 显示下一个单词
             } else {
-                // 不再提示，直接显示错误的单词
                 questionDiv.innerHTML = `<h2>${words[currentIndex].Explanation2}</h2>`;
                 answerDiv.innerHTML = `<p>${correctWord}</p>`;
                 spellMessage.classList.add('hidden');  // 隐藏拼写提示信息
+
+                // 如果还没有记录过错误，则调用更新错误次数的函数
+                if (!hasRecordedError) {
+                    updateFalseCount();
+                    hasRecordedError = true; // 标记为已记录错误
+                }
             }
             event.preventDefault();  // 阻止默认行为，如表单提交
         }
     });
-    
+
+    function updateFalseCount() {
+        const userId = document.getElementById('userId').value; // 确保获取了userId
+        const wordId = words[currentIndex].Id;
+
+        console.log('userId:', userId);
+        console.log('wordId:', wordId);
+
+        const falseData = {
+            userId: userId,
+            wordId: wordId
+        };
+
+        console.log('Sending false count update request:', falseData);
+
+        axios.post('/api/propress/score/updatefalsecount', falseData)
+            .then(response => {
+                console.log("False count updated:", response.data);
+            })
+            .catch(error => {
+                console.error("Error updating false count:", error.response ? error.response.data : error.message);
+            });
+    }
+
+
+    // 发音函数
+    function speak(text) {
+        if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US'; // 你可以根据需要设置为 'en-US' 或 'en-GB'
+            speechSynthesis.speak(utterance);
+        } else {
+            console.error('Speech synthesis is not supported in this browser.');
+        }
+    }
+
+    function cleanPhonetic(phonetic) {
+        return phonetic.trim().replace(/^,|,$/g, '');
+    }
+
+    function speakPhonetic(phonetic) {
+        const cleanPhonetic = cleanPhonetic(phonetic);
+        if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(cleanPhonetic);
+            utterance.lang = 'en-US'; // 设置语言为英语
+            speechSynthesis.speak(utterance);
+        } else {
+            console.error('Speech synthesis is not supported in this browser.');
+        }
+    }
+
 });

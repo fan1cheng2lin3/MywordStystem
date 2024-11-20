@@ -5481,11 +5481,9 @@ namespace myword.DAL
 		
 		private System.Nullable<int> _count;
 		
-		private System.Nullable<int> _false;
+		private System.Nullable<int> _FalseCount;
 		
-		private System.Nullable<int> _true;
-		
-		private System.Nullable<System.TimeSpan> _lasttime;
+		private string _lasttime;
 		
 		private System.Nullable<double> _lost;
 		
@@ -5505,11 +5503,9 @@ namespace myword.DAL
     partial void OnWordIdChanged();
     partial void OncountChanging(System.Nullable<int> value);
     partial void OncountChanged();
-    partial void OnfalseChanging(System.Nullable<int> value);
-    partial void OnfalseChanged();
-    partial void OntrueChanging(System.Nullable<int> value);
-    partial void OntrueChanged();
-    partial void OnlasttimeChanging(System.Nullable<System.TimeSpan> value);
+    partial void OnFalseCountChanging(System.Nullable<int> value);
+    partial void OnFalseCountChanged();
+    partial void OnlasttimeChanging(string value);
     partial void OnlasttimeChanged();
     partial void OnlostChanging(System.Nullable<double> value);
     partial void OnlostChanged();
@@ -5604,48 +5600,28 @@ namespace myword.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="false", Storage="_false", DbType="Int")]
-		public System.Nullable<int> @false
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FalseCount", DbType="Int")]
+		public System.Nullable<int> FalseCount
 		{
 			get
 			{
-				return this._false;
+				return this._FalseCount;
 			}
 			set
 			{
-				if ((this._false != value))
+				if ((this._FalseCount != value))
 				{
-					this.OnfalseChanging(value);
+					this.OnFalseCountChanging(value);
 					this.SendPropertyChanging();
-					this._false = value;
-					this.SendPropertyChanged("@false");
-					this.OnfalseChanged();
+					this._FalseCount = value;
+					this.SendPropertyChanged("FalseCount");
+					this.OnFalseCountChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="true", Storage="_true", DbType="Int")]
-		public System.Nullable<int> @true
-		{
-			get
-			{
-				return this._true;
-			}
-			set
-			{
-				if ((this._true != value))
-				{
-					this.OntrueChanging(value);
-					this.SendPropertyChanging();
-					this._true = value;
-					this.SendPropertyChanged("@true");
-					this.OntrueChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lasttime", DbType="Time")]
-		public System.Nullable<System.TimeSpan> lasttime
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lasttime", DbType="NVarChar(50)")]
+		public string lasttime
 		{
 			get
 			{

@@ -9,6 +9,29 @@ public partial class Card_word2 : System.Web.UI.Page
 
     public void Page_Load(object sender, EventArgs e)
     {
+
+
+
+
+        if (!IsPostBack)
+        {
+            if (Session["Userid"] != null)
+            {
+                userId.Value = Session["Userid"].ToString();  // 设置 userId 的值
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
         //if (!IsPostBack)
         //{
         //    // 初始化索引

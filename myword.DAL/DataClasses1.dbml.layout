@@ -176,10 +176,10 @@
         <elementListCompartment Id="b514e417-11a8-405a-af00-481b69595e30" absoluteBounds="0.515, 10.71, 1.9700000000000002, 1.1620992024739583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="27dca6b6-1f23-4a31-92ec-2978f32aa482" absoluteBounds="0.5, 12.375, 2, 2.6460697428385416">
+    <classShape Id="1bd52b18-eca3-47a3-b146-19f9ee748c81" absoluteBounds="0.5, 12.875, 2, 2.4612756347656251">
       <DataClassMoniker Name="/DataClasses1DataContext/progress" />
       <nestedChildShapes>
-        <elementListCompartment Id="65c87fe0-50ba-4708-abf3-344dd915e1c5" absoluteBounds="0.51500000000000012, 12.835, 1.9700000000000002, 2.0860697428385415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d014aa59-527e-4a44-ba63-5787e67ee92f" absoluteBounds="0.51500000000000012, 13.335, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

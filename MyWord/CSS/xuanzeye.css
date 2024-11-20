@@ -142,3 +142,7 @@ body {
     height: 50px;
     margin: 0 17.5px;
 }
+
+.word-btn {
+    display: none; /* 默认隐藏所有按钮 */
+}

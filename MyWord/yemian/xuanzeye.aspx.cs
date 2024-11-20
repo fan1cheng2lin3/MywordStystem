@@ -5,16 +5,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class yemian_xuanciye : System.Web.UI.Page
+public partial class yemian_Desfault : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
+         if (!IsPostBack)
         {
-            // 设置用户ID
             if (Session["Userid"] != null)
             {
-                userId.Value = Session["Userid"].ToString();
+                userId.Value = Session["Userid"].ToString();  // 设置 userId 的值
             }
         }
     }
